@@ -1,0 +1,38 @@
+# Section order and copy for README.md. Entry `section` values must match a key here.
+# `intro` is one or two plain sentences shown under the heading.
+
+- key: agents
+  title: Trading agents & frameworks
+  intro: Open-source systems where an LLM (or a team of them) reads the market and decides what to trade. Most are research-grade; the `mode` tag says whether a project trades live, paper-trades, or is a study harness.
+- key: prediction_markets
+  title: Prediction-market agents
+  intro: Agents and tooling for Polymarket, Kalshi and similar venues. Binary contracts, thin books and event resolution make this the most active corner of agentic trading right now.
+- key: data_mcp
+  title: Market data & research tools
+  intro: MCP servers and agent tools that feed prices, fundamentals, filings and news into an agent. The decision layer is only as good as what it can see.
+- key: execution
+  title: 'Execution: broker & exchange access'
+  intro: 'How an agent actually places orders: MCP servers and SDKs for brokers and exchanges. Anything here can move real money; read the risk section before wiring one up.'
+- key: risk
+  title: Risk & guardrails
+  intro: Position limits, kill switches, pre-trade checks and prompt-injection defences for autonomous agents. Sparse today, which is itself a finding.
+- key: evaluation
+  title: Backtesting & evaluation
+  intro: Engines and harnesses for testing a strategy before it touches money. For LLM agents the extra hazard is look-ahead bias through the model's training data.
+- key: benchmarks
+  title: Benchmarks & leaderboards
+  intro: Live arenas and leaderboards where LLM agents trade against each other or the market in public.
+- key: incidents
+  sort: year
+  title: Incidents & postmortems
+  intro: What it looks like when automated trading goes wrong, from classic algorithmic failures to LLM agents losing money in public. Every entry has a primary source.
+- key: regulation
+  sort: year
+  title: Regulation & compliance
+  intro: Rules that already apply to algorithmic trading, and therefore to agents, in the main jurisdictions. Not legal advice.
+- key: chinese
+  title: 中文资源 · Chinese-language & A-share tools
+  intro: 面向 A 股、港股的 agent 工具和中文资料。Tools and writing for mainland and Hong Kong markets, where data access and trading hours differ from US venues.
+- key: related_lists
+  title: Related lists
+  intro: Broader lists this one deliberately does not duplicate.

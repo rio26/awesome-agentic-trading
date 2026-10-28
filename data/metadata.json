@@ -1,0 +1,527 @@
+{
+  "0xethanq/astra-quant-agent": {
+    "archived": false,
+    "full_name": "0xethanq/astra-quant-agent",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-10-03T20:02:58Z",
+    "stars": 403
+  },
+  "24mlight/A_Share_investment_Agent": {
+    "archived": false,
+    "full_name": "24mlight/A_Share_investment_Agent",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-05-26T14:40:51Z",
+    "stars": 2486
+  },
+  "AI4Finance-Foundation/FinGPT": {
+    "archived": false,
+    "full_name": "AI4Finance-Foundation/FinGPT",
+    "license": "MIT",
+    "pushed_at": "2026-10-25T13:49:15Z",
+    "stars": 21482
+  },
+  "AI4Finance-Foundation/FinRobot": {
+    "archived": false,
+    "full_name": "AI4Finance-Foundation/FinRobot",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-10-24T13:58:26Z",
+    "stars": 8325
+  },
+  "BlockRunAI/awesome-finance-mcp": {
+    "archived": false,
+    "full_name": "BlockRunAI/awesome-finance-mcp",
+    "license": null,
+    "pushed_at": "2026-09-05T17:49:15Z",
+    "stars": 248
+  },
+  "CharmingSteve/agent-provost": {
+    "archived": false,
+    "full_name": "CharmingSteve/agent-provost",
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-09-04T00:06:47Z",
+    "stars": 3
+  },
+  "ChenYXxxx/stockbench": {
+    "archived": false,
+    "full_name": "ChenYXxxx/stockbench",
+    "license": "Apache-2.0",
+    "pushed_at": "2025-10-28T08:14:26Z",
+    "stars": 183
+  },
+  "HKUDS/AI-Trader": {
+    "archived": false,
+    "full_name": "HKUDS/AI-Trader",
+    "license": null,
+    "pushed_at": "2026-06-11T09:26:03Z",
+    "stars": 23003
+  },
+  "HKUDS/Vibe-Trading": {
+    "archived": false,
+    "full_name": "HKUDS/Vibe-Trading",
+    "license": "MIT",
+    "pushed_at": "2026-10-28T03:24:14Z",
+    "stars": 36976
+  },
+  "HephaestLab/TraderHarness": {
+    "archived": false,
+    "full_name": "HephaestLab/TraderHarness",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-08-22T17:06:47Z",
+    "stars": 42
+  },
+  "HimanshuMohanty-Git24/RakshaQuant": {
+    "archived": false,
+    "full_name": "HimanshuMohanty-Git24/RakshaQuant",
+    "license": "MIT",
+    "pushed_at": "2026-10-23T00:14:57Z",
+    "stars": 63
+  },
+  "Jon-Becker/prediction-market-analysis": {
+    "archived": false,
+    "full_name": "Jon-Becker/prediction-market-analysis",
+    "license": "MIT",
+    "pushed_at": "2026-10-19T20:43:43Z",
+    "stars": 3915
+  },
+  "LLMQuant/awesome-trading-agents": {
+    "archived": false,
+    "full_name": "LLMQuant/awesome-trading-agents",
+    "license": "CC0-1.0",
+    "pushed_at": "2026-08-13T03:30:06Z",
+    "stars": 948
+  },
+  "Lumiwealth/lumibot": {
+    "archived": false,
+    "full_name": "Lumiwealth/lumibot",
+    "license": "GPL-3.0",
+    "pushed_at": "2026-10-28T07:52:00Z",
+    "stars": 2179
+  },
+  "LuxAlgo/luxalgo-mcp-server": {
+    "archived": false,
+    "full_name": "LuxAlgo/luxalgo-mcp-server",
+    "license": "MIT",
+    "pushed_at": "2026-10-25T17:16:49Z",
+    "stars": 104
+  },
+  "NoFxAiOS/nofx": {
+    "archived": false,
+    "full_name": "NoFxAiOS/nofx",
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-10-21T14:02:05Z",
+    "stars": 13164
+  },
+  "OctagonAI/kalshi-trading-bot-cli": {
+    "archived": false,
+    "full_name": "OctagonAI/kalshi-trading-bot-cli",
+    "license": "MIT",
+    "pushed_at": "2026-10-01T23:54:37Z",
+    "stars": 406
+  },
+  "Polymarket/agent-skills": {
+    "archived": false,
+    "full_name": "Polymarket/agent-skills",
+    "license": null,
+    "pushed_at": "2026-02-19T15:59:36Z",
+    "stars": 193
+  },
+  "ProjectDXAI/continuous-record-llm-trading-agents": {
+    "archived": false,
+    "full_name": "ProjectDXAI/continuous-record-llm-trading-agents",
+    "license": "CC-BY-4.0",
+    "pushed_at": "2026-09-10T13:55:41Z",
+    "stars": 73
+  },
+  "Riskstate/risk-engine": {
+    "archived": false,
+    "full_name": "Riskstate/risk-engine",
+    "license": null,
+    "pushed_at": "2026-09-10T11:41:06Z",
+    "stars": 14
+  },
+  "Synpath-ai/synpath": {
+    "archived": false,
+    "full_name": "Synpath-ai/synpath",
+    "license": "MIT",
+    "pushed_at": "2026-10-27T14:56:07Z",
+    "stars": 193
+  },
+  "TNT-Likely/PanWatch": {
+    "archived": false,
+    "full_name": "TNT-Likely/PanWatch",
+    "license": "MIT",
+    "pushed_at": "2026-10-27T13:30:51Z",
+    "stars": 2267
+  },
+  "TauricResearch/TradingAgents": {
+    "archived": false,
+    "full_name": "TauricResearch/TradingAgents",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-10-27T08:43:04Z",
+    "stars": 117626
+  },
+  "TraderAlice/OpenAlice": {
+    "archived": false,
+    "full_name": "TraderAlice/OpenAlice",
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-10-24T01:44:55Z",
+    "stars": 7387
+  },
+  "YichengYang-Ethan/oracle3-prediction-market-agent": {
+    "archived": false,
+    "full_name": "YichengYang-Ethan/oracle3-prediction-market-agent",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-10-12T01:01:19Z",
+    "stars": 534
+  },
+  "YoungCan-Wang/WyckoffTradingAgent": {
+    "archived": false,
+    "full_name": "YoungCan-Wang/WyckoffTradingAgent",
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-10-28T05:43:52Z",
+    "stars": 758
+  },
+  "aarora4/Awesome-Prediction-Market-Tools": {
+    "archived": false,
+    "full_name": "aarora4/Awesome-Prediction-Market-Tools",
+    "license": null,
+    "pushed_at": "2026-10-07T03:03:02Z",
+    "stars": 789
+  },
+  "agent-next/polymarket-paper-trader": {
+    "archived": false,
+    "full_name": "agent-next/polymarket-paper-trader",
+    "license": "MIT",
+    "pushed_at": "2026-10-20T11:49:03Z",
+    "stars": 493
+  },
+  "alpacahq/alpaca-mcp-server": {
+    "archived": false,
+    "full_name": "alpacahq/alpaca-mcp-server",
+    "license": "MIT",
+    "pushed_at": "2026-10-27T09:06:46Z",
+    "stars": 1049
+  },
+  "alpacahq/alpaca-py": {
+    "archived": false,
+    "full_name": "alpacahq/alpaca-py",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-10-28T09:11:14Z",
+    "stars": 1571
+  },
+  "alphavantage/alpha_vantage_mcp": {
+    "archived": false,
+    "full_name": "alphavantage/alpha_vantage_mcp",
+    "license": "MIT",
+    "pushed_at": "2026-10-03T00:09:33Z",
+    "stars": 221
+  },
+  "alsk1992/CloddsBot": {
+    "archived": false,
+    "full_name": "alsk1992/CloddsBot",
+    "license": "MIT",
+    "pushed_at": "2026-10-02T19:37:29Z",
+    "stars": 3014
+  },
+  "ariadng/metatrader-mcp-server": {
+    "archived": false,
+    "full_name": "ariadng/metatrader-mcp-server",
+    "license": "MIT",
+    "pushed_at": "2026-03-28T18:39:29Z",
+    "stars": 840
+  },
+  "bbfamily/abu": {
+    "archived": false,
+    "full_name": "bbfamily/abu",
+    "license": "GPL-3.0",
+    "pushed_at": "2026-10-16T11:32:48Z",
+    "stars": 19049
+  },
+  "bennyjo/phil": {
+    "archived": false,
+    "full_name": "bennyjo/phil",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-10-28T11:27:43Z",
+    "stars": 240
+  },
+  "botcrypto-io/awesome-crypto-trading-bots": {
+    "archived": false,
+    "full_name": "botcrypto-io/awesome-crypto-trading-bots",
+    "license": "CC0-1.0",
+    "pushed_at": "2026-08-10T19:54:01Z",
+    "stars": 2542
+  },
+  "braedonsaunders/homerun": {
+    "archived": false,
+    "full_name": "braedonsaunders/homerun",
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-10-27T23:21:04Z",
+    "stars": 211
+  },
+  "caiovicentino/polymarket-mcp-server": {
+    "archived": false,
+    "full_name": "caiovicentino/polymarket-mcp-server",
+    "license": "MIT",
+    "pushed_at": "2026-09-20T16:04:03Z",
+    "stars": 728
+  },
+  "ccxt/ccxt": {
+    "archived": false,
+    "full_name": "ccxt/ccxt",
+    "license": "MIT",
+    "pushed_at": "2026-10-28T11:33:30Z",
+    "stars": 44606
+  },
+  "chrisworsey55/atlas-gic": {
+    "archived": false,
+    "full_name": "chrisworsey55/atlas-gic",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-09-22T11:51:44Z",
+    "stars": 2333
+  },
+  "code-rabi/interactive-brokers-mcp": {
+    "archived": false,
+    "full_name": "code-rabi/interactive-brokers-mcp",
+    "license": "MIT",
+    "pushed_at": "2026-07-21T06:36:57Z",
+    "stars": 227
+  },
+  "evan-kolberg/prediction-market-backtesting": {
+    "archived": false,
+    "full_name": "evan-kolberg/prediction-market-backtesting",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-05-16T21:24:47Z",
+    "stars": 1258
+  },
+  "financial-datasets/mcp-server": {
+    "archived": false,
+    "full_name": "financial-datasets/mcp-server",
+    "license": "MIT",
+    "pushed_at": "2025-06-05T19:50:38Z",
+    "stars": 2314
+  },
+  "firmai/financial-machine-learning": {
+    "archived": false,
+    "full_name": "firmai/financial-machine-learning",
+    "license": null,
+    "pushed_at": "2025-01-03T01:27:50Z",
+    "stars": 8829
+  },
+  "fzn0x/idx": {
+    "archived": false,
+    "full_name": "fzn0x/idx",
+    "license": "MIT",
+    "pushed_at": "2026-10-24T07:49:43Z",
+    "stars": 197
+  },
+  "galleonlabs/hypergrok-trading-desk": {
+    "archived": false,
+    "full_name": "galleonlabs/hypergrok-trading-desk",
+    "license": "MIT",
+    "pushed_at": "2026-10-27T11:41:12Z",
+    "stars": 214
+  },
+  "guangxiangdebizi/FinanceMCP": {
+    "archived": false,
+    "full_name": "guangxiangdebizi/FinanceMCP",
+    "license": "MIT",
+    "pushed_at": "2026-10-26T09:08:12Z",
+    "stars": 864
+  },
+  "hsliuping/TradingAgents-CN": {
+    "archived": false,
+    "full_name": "hsliuping/TradingAgents-CN",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-09-22T12:11:05Z",
+    "stars": 32667
+  },
+  "hyperliquid-dex/hyperliquid-python-sdk": {
+    "archived": false,
+    "full_name": "hyperliquid-dex/hyperliquid-python-sdk",
+    "license": "MIT",
+    "pushed_at": "2026-06-04T19:49:39Z",
+    "stars": 1866
+  },
+  "jundizhou/easy-stock": {
+    "archived": false,
+    "full_name": "jundizhou/easy-stock",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-10-27T14:05:43Z",
+    "stars": 1677
+  },
+  "kernc/backtesting.py": {
+    "archived": false,
+    "full_name": "kernc/backtesting.py",
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-08-05T12:39:16Z",
+    "stars": 9155
+  },
+  "lazy-dinosaur/ccxt-mcp": {
+    "archived": false,
+    "full_name": "lazy-dinosaur/ccxt-mcp",
+    "license": "MIT",
+    "pushed_at": "2026-04-23T06:40:21Z",
+    "stars": 95
+  },
+  "massive-com/mcp_massive": {
+    "archived": false,
+    "full_name": "massive-com/mcp_massive",
+    "license": "MIT",
+    "pushed_at": "2026-10-08T14:13:09Z",
+    "stars": 398
+  },
+  "microsoft/qlib": {
+    "archived": false,
+    "full_name": "microsoft/qlib",
+    "license": "MIT",
+    "pushed_at": "2026-10-22T06:22:15Z",
+    "stars": 49773
+  },
+  "mnemox-ai/tradememory-protocol": {
+    "archived": false,
+    "full_name": "mnemox-ai/tradememory-protocol",
+    "license": "MIT",
+    "pushed_at": "2026-10-23T17:29:16Z",
+    "stars": 1432
+  },
+  "moss-site/moss-trade-bot-skills": {
+    "archived": false,
+    "full_name": "moss-site/moss-trade-bot-skills",
+    "license": "MIT-0",
+    "pushed_at": "2026-10-20T01:49:30Z",
+    "stars": 390
+  },
+  "nahrek/polyledger": {
+    "archived": false,
+    "full_name": "nahrek/polyledger",
+    "license": "MIT",
+    "pushed_at": "2026-10-20T17:33:43Z",
+    "stars": 599
+  },
+  "narumiruna/yfinance-mcp": {
+    "archived": false,
+    "full_name": "narumiruna/yfinance-mcp",
+    "license": "MIT",
+    "pushed_at": "2026-10-25T19:54:35Z",
+    "stars": 205
+  },
+  "nautechsystems/nautilus_trader": {
+    "archived": false,
+    "full_name": "nautechsystems/nautilus_trader",
+    "license": "LGPL-3.0",
+    "pushed_at": "2026-10-28T11:01:43Z",
+    "stars": 30984
+  },
+  "openpitkit/pit": {
+    "archived": false,
+    "full_name": "openpitkit/pit",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-10-27T08:56:56Z",
+    "stars": 4
+  },
+  "paperswithbacktest/awesome-systematic-trading": {
+    "archived": false,
+    "full_name": "paperswithbacktest/awesome-systematic-trading",
+    "license": null,
+    "pushed_at": "2026-09-28T10:33:48Z",
+    "stars": 15049
+  },
+  "pmxt-dev/pmxt": {
+    "archived": false,
+    "full_name": "pmxt-dev/pmxt",
+    "license": "MIT",
+    "pushed_at": "2026-09-30T19:30:46Z",
+    "stars": 2185
+  },
+  "polakowo/vectorbt": {
+    "archived": false,
+    "full_name": "polakowo/vectorbt",
+    "license": "NOASSERTION",
+    "pushed_at": "2026-10-23T12:07:43Z",
+    "stars": 9573
+  },
+  "qrak/LLM_trader": {
+    "archived": false,
+    "full_name": "qrak/LLM_trader",
+    "license": "MIT",
+    "pushed_at": "2026-10-28T10:08:19Z",
+    "stars": 138
+  },
+  "ryanfrigo/kalshi-ai-trading-bot": {
+    "archived": false,
+    "full_name": "ryanfrigo/kalshi-ai-trading-bot",
+    "license": "MIT",
+    "pushed_at": "2026-10-24T01:49:09Z",
+    "stars": 635
+  },
+  "simonlin1212/Vibe-Research": {
+    "archived": false,
+    "full_name": "simonlin1212/Vibe-Research",
+    "license": "MIT",
+    "pushed_at": "2026-10-26T08:08:01Z",
+    "stars": 3329
+  },
+  "simonlin1212/a-stock-data": {
+    "archived": false,
+    "full_name": "simonlin1212/a-stock-data",
+    "license": "Apache-2.0",
+    "pushed_at": "2026-10-28T01:33:32Z",
+    "stars": 11202
+  },
+  "stefanoamorelli/sec-edgar-mcp": {
+    "archived": false,
+    "full_name": "stefanoamorelli/sec-edgar-mcp",
+    "license": "AGPL-3.0",
+    "pushed_at": "2026-10-03T09:11:21Z",
+    "stars": 380
+  },
+  "suislanchez/polymarket-kalshi-weather-bot": {
+    "archived": false,
+    "full_name": "suislanchez/polymarket-kalshi-weather-bot",
+    "license": null,
+    "pushed_at": "2026-03-02T01:19:05Z",
+    "stars": 796
+  },
+  "thuquant/awesome-quant": {
+    "archived": false,
+    "full_name": "thuquant/awesome-quant",
+    "license": "MIT",
+    "pushed_at": "2026-10-28T04:57:52Z",
+    "stars": 5697
+  },
+  "virattt/ai-hedge-fund": {
+    "archived": false,
+    "full_name": "virattt/ai-hedge-fund",
+    "license": "MIT",
+    "pushed_at": "2026-10-27T19:40:08Z",
+    "stars": 64310
+  },
+  "wilsonfreitas/awesome-quant": {
+    "archived": false,
+    "full_name": "wilsonfreitas/awesome-quant",
+    "license": null,
+    "pushed_at": "2026-10-28T01:03:34Z",
+    "stars": 30324
+  },
+  "wquguru/nof0": {
+    "archived": false,
+    "full_name": "wquguru/nof0",
+    "license": null,
+    "pushed_at": "2025-12-07T08:58:49Z",
+    "stars": 2755
+  },
+  "wshobson/maverick-mcp": {
+    "archived": false,
+    "full_name": "wshobson/maverick-mcp",
+    "license": "MIT",
+    "pushed_at": "2026-10-26T20:35:46Z",
+    "stars": 711
+  },
+  "zayansalman/pretrade-risk-controls": {
+    "archived": false,
+    "full_name": "zayansalman/pretrade-risk-controls",
+    "license": "MIT",
+    "pushed_at": "2026-07-29T09:33:50Z",
+    "stars": 3
+  }
+}

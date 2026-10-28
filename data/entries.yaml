@@ -1,0 +1,772 @@
+# Source of truth for README.md. One entry per item; see CONTRIBUTING.md for fields.
+
+- name: AI Hedge Fund
+  repo: virattt/ai-hedge-fund
+  section: agents
+  description: Team of LLM agents modelled on well-known investors that debate and produce portfolio decisions for US equities, with a backtester and web UI.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  featured: true
+  added: '2026-10-28'
+- name: Astra Quant Agent
+  repo: 0xethanq/astra-quant-agent
+  section: agents
+  description: Autonomous crypto trading system that combines multi-LLM market analysis with deterministic Python risk control and OKX order execution.
+  markets:
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: ATLAS
+  repo: chrisworsey55/atlas-gic
+  section: agents
+  description: Framework of debating LLM trading agents whose prompts are rewritten from scored market outcomes, in the style of autoresearch loops.
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: CloddsBot
+  repo: alsk1992/CloddsBot
+  section: agents
+  description: Autonomous AI trading agent that scans and trades across Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs and several EVM chains from one runtime.
+  markets:
+  - multi-asset
+  - prediction-markets
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: FinGPT
+  repo: AI4Finance-Foundation/FinGPT
+  section: agents
+  description: Open financial LLMs and fine-tuning recipes from AI4Finance for sentiment, forecasting and retrieval tasks used by trading agents.
+  markets:
+  - equities
+  mode: research
+  language: Jupyter Notebook
+  added: '2026-10-28'
+- name: FinRobot
+  repo: AI4Finance-Foundation/FinRobot
+  section: agents
+  description: Agent platform from AI4Finance that chains LLM-based analyst, forecaster and strategy agents for financial analysis and trading research.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: HyperGrok Trading Desk
+  repo: galleonlabs/hypergrok-trading-desk
+  section: agents
+  description: Role-based Hyperliquid trading desk for AI agents with seven roles, seventeen skills and keyless market tools; execution requires an approved ticket and the user's API wallet.
+  markets:
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: LLM_trader
+  repo: qrak/LLM_trader
+  section: agents
+  description: BTC/USDC LLM trading agent with chart vision, a vector memory of its own closed trades, deterministic risk gates and a public dashboard; paper trading by default.
+  markets:
+  - crypto
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Moss Trade Bot Skills
+  repo: moss-site/moss-trade-bot-skills
+  section: agents
+  description: Agent skills that turn a natural-language description of a trading style into a crypto strategy across trend, mean-reversion, momentum, volume and risk pillars, then backtest and run it.
+  markets:
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: NoFx
+  repo: NoFxAiOS/nofx
+  section: agents
+  description: AI trading terminal assistant written in Go for US stocks, commodities, forex and crypto.
+  markets:
+  - multi-asset
+  mode: live
+  language: Go
+  added: '2026-10-28'
+- name: OpenAlice
+  repo: TraderAlice/OpenAlice
+  section: agents
+  description: Single-operator AI trading agent that covers research, position entry, ongoing management and exit across equities, crypto, commodities, forex and macro.
+  markets:
+  - multi-asset
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: TradingAgents
+  repo: TauricResearch/TradingAgents
+  section: agents
+  description: Multi-agent LLM framework that mirrors a trading firm (analysts, researchers, trader, risk manager) and produces trade decisions for US equities.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  featured: true
+  added: '2026-10-28'
+- name: Vibe-Trading
+  repo: HKUDS/Vibe-Trading
+  section: agents
+  description: Personal trading agent with a FastAPI backend and React frontend that gives a coding agent market data, analysis and trading capabilities through one install.
+  markets:
+  - multi-asset
+  mode: paper
+  language: Python
+  featured: true
+  added: '2026-10-28'
+- name: Homerun
+  repo: braedonsaunders/homerun
+  section: prediction_markets
+  description: Prediction market trading platform for Polymarket and Kalshi where strategies and data sources are written in Python, backtested, then paper or live traded.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Kalshi AI Trading Bot
+  repo: ryanfrigo/kalshi-ai-trading-bot
+  section: prediction_markets
+  description: Agent-native toolkit (CLI, MCP server, Claude skill) for Kalshi that measures whether a strategy's edge beats the book before and after trading.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Kalshi Trading Bot CLI
+  repo: OctagonAI/kalshi-trading-bot-cli
+  section: prediction_markets
+  description: CLI that runs LLM fundamental research on Kalshi markets, produces independent probability estimates and computes edge against the live order book.
+  markets:
+  - prediction-markets
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: Oracle3
+  repo: YichengYang-Ethan/oracle3-prediction-market-agent
+  section: prediction_markets
+  description: Trading engine and MCP server for prediction markets that finds fee-adjusted no-arbitrage violations across related event contracts and trades them.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Phil
+  repo: bennyjo/phil
+  section: prediction_markets
+  description: Self-improving agent that trades short-term prediction markets and rewrites its own strategy after every settled bet, paper trading continuously.
+  markets:
+  - prediction-markets
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: PMXT
+  repo: pmxt-dev/pmxt
+  section: prediction_markets
+  description: Unified trading API for prediction markets (Polymarket, Kalshi and others), modelled on ccxt.
+  markets:
+  - prediction-markets
+  mode: library
+  language: TypeScript
+  added: '2026-10-28'
+- name: Polymarket Agent Skills
+  repo: Polymarket/agent-skills
+  section: prediction_markets
+  description: Official Polymarket skill files giving agents the authentication, order, market-data, websocket and CTF knowledge needed to build on the platform.
+  markets:
+  - prediction-markets
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: Polymarket Kalshi Weather Bot
+  repo: suislanchez/polymarket-kalshi-weather-bot
+  section: prediction_markets
+  description: Bot that trades daily temperature markets on Kalshi and Polymarket using GFS ensemble weather forecasts (last pushed March 2026).
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Polymarket MCP Server
+  repo: caiovicentino/polymarket-mcp-server
+  section: prediction_markets
+  description: MCP server exposing Polymarket market data, monitoring and order placement as tools for Claude and other MCP clients.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Polymarket Paper Trader
+  repo: agent-next/polymarket-paper-trader
+  section: prediction_markets
+  description: Paper trading simulator for Polymarket so agents and strategies can be tested without funds.
+  markets:
+  - prediction-markets
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Prediction Market Analysis
+  repo: Jon-Becker/prediction-market-analysis
+  section: prediction_markets
+  description: Framework for collecting and analysing prediction market data, with a large public dataset of Polymarket and Kalshi markets and trades.
+  markets:
+  - prediction-markets
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Prediction Market Backtesting
+  repo: evan-kolberg/prediction-market-backtesting
+  section: prediction_markets
+  description: Nautilus Trader extension for backtesting prediction market strategies on historical order data.
+  markets:
+  - prediction-markets
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Alpha Vantage MCP
+  repo: alphavantage/alpha_vantage_mcp
+  section: data_mcp
+  description: Official Alpha Vantage MCP server exposing prices, fundamentals, technical indicators and economic data as tools.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: Financial Datasets MCP
+  repo: financial-datasets/mcp-server
+  section: data_mcp
+  description: MCP server for the Financial Datasets API covering prices, fundamentals, filings and news (last pushed mid-2025).
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: idx
+  repo: fzn0x/idx
+  section: data_mcp
+  description: Indonesian stock market (IDX/IHSG) prices and fundamentals exposed through a web terminal, CLI and an MCP server for agents.
+  markets:
+  - equities
+  mode: library
+  language: Rust
+  added: '2026-10-28'
+- name: LuxAlgo MCP server
+  repo: LuxAlgo/luxalgo-mcp-server
+  section: data_mcp
+  description: Exposes LuxAlgo's indicators and screeners as MCP tools without an API key, so an agent can query technical signals directly.
+  markets:
+  - multi-asset
+  mode: library
+  language: TypeScript
+  added: '2026-10-28'
+- name: Massive (Polygon) MCP
+  repo: massive-com/mcp_massive
+  section: data_mcp
+  description: Official MCP server for Massive.com (formerly Polygon.io) market data covering stocks, options, forex and crypto.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: Maverick MCP
+  repo: wshobson/maverick-mcp
+  section: data_mcp
+  description: Local MCP server for Yahoo Finance data, technical analysis, portfolio tracking and Python backtesting with no API key for core tools.
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: polyledger
+  repo: nahrek/polyledger
+  section: data_mcp
+  description: Resumable Polymarket indexer that collects CLOB market metadata and on-chain Polygon trades into a single DuckDB file for research and backtests.
+  markets:
+  - prediction-markets
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: SEC EDGAR MCP
+  repo: stefanoamorelli/sec-edgar-mcp
+  section: data_mcp
+  description: MCP server for querying SEC EDGAR filings and XBRL financial data.
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: yfinance MCP
+  repo: narumiruna/yfinance-mcp
+  section: data_mcp
+  description: MCP server over yfinance providing quotes, financial statements, analyst data, news, options chains and chart images.
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: Alpaca MCP Server
+  repo: alpacahq/alpaca-mcp-server
+  section: execution
+  description: Official Alpaca MCP server for trading stocks, ETFs, crypto and options and pulling account and market data from an MCP client.
+  markets:
+  - equities
+  - options
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: alpaca-py
+  repo: alpacahq/alpaca-py
+  section: execution
+  description: Official Python SDK for the Alpaca trading and market data API; foundational SDK for US stocks, options and crypto.
+  markets:
+  - equities
+  - options
+  - crypto
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: ccxt
+  repo: ccxt/ccxt
+  section: execution
+  description: Unified trading API for more than 100 crypto exchanges and prediction markets in JavaScript, Python, C#, PHP, Go, Java and Rust; foundational SDK.
+  markets:
+  - crypto
+  - prediction-markets
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: CCXT MCP
+  repo: lazy-dinosaur/ccxt-mcp
+  section: execution
+  description: MCP server wrapping ccxt so agents can query balances, order books and place orders on supported crypto exchanges.
+  markets:
+  - crypto
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: Hyperliquid Python SDK
+  repo: hyperliquid-dex/hyperliquid-python-sdk
+  section: execution
+  description: Official Python SDK for the Hyperliquid perpetuals and spot API.
+  markets:
+  - crypto
+  - futures
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: Interactive Brokers MCP
+  repo: code-rabi/interactive-brokers-mcp
+  section: execution
+  description: MCP server that exposes Interactive Brokers account, market data and order tools to agents.
+  markets:
+  - multi-asset
+  mode: live
+  language: JavaScript
+  added: '2026-10-28'
+- name: Lumibot
+  repo: Lumiwealth/lumibot
+  section: execution
+  description: Python trading framework with agent integrations that backtests, paper trades and live trades across twelve brokers for stocks, options, futures, forex and crypto.
+  markets:
+  - multi-asset
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: MetaTrader MCP Server
+  repo: ariadng/metatrader-mcp-server
+  section: execution
+  description: MCP server that lets LLMs read data and place trades through the MetaTrader 5 platform.
+  markets:
+  - forex
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Synpath
+  repo: Synpath-ai/synpath
+  section: execution
+  description: Single Python SDK and API for prediction markets that places and manages orders on Kalshi, Polymarket, Polymarket US and Opinion through one interface.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Agent Provost
+  repo: CharmingSteve/agent-provost
+  section: risk
+  description: Compliance firewall in front of the Alpaca MCP server that registers and logs every call and trips a kill switch on rule breaches.
+  markets:
+  - equities
+  mode: library
+  language: Lua
+  added: '2026-10-28'
+- name: OpenPit
+  repo: openpitkit/pit
+  section: risk
+  description: Embeddable pre-trade risk engine and SDK that checks every order against size, rate and solvency limits before it reaches a venue.
+  markets:
+  - multi-asset
+  mode: library
+  language: Rust
+  added: '2026-10-28'
+- name: Pre-trade Risk Controls
+  repo: zayansalman/pretrade-risk-controls
+  section: risk
+  description: Venue-independent pre-trade risk controls for automated trading including a kill switch, spend caps and a trailing high-water-mark loss halt.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: RakshaQuant
+  repo: HimanshuMohanty-Git24/RakshaQuant
+  section: risk
+  description: Risk-gated paper trading platform for NSE equities that measures whether an AI layer improves results net of its cost against a deterministic baseline.
+  markets:
+  - equities
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Riskstate Risk Engine
+  repo: Riskstate/risk-engine
+  section: risk
+  description: Pre-trade risk API for BTC and ETH exposure governance across spot, perps and DeFi with a multi-level policy engine.
+  markets:
+  - crypto
+  mode: library
+  added: '2026-10-28'
+- name: TradeMemory Protocol
+  repo: mnemox-ai/tradememory-protocol
+  section: risk
+  description: Local-first decision audit trail and memory for AI trading agents that surfaces an agent's own losing patterns before new trades, with a tamper-evident hash chain and MCP tools.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: backtesting.py
+  repo: kernc/backtesting.py
+  section: evaluation
+  description: Lightweight Python library for backtesting trading strategies on OHLC data with interactive plots.
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Nautilus Trader
+  repo: nautechsystems/nautilus_trader
+  section: evaluation
+  description: Rust-native, event-driven trading engine with deterministic backtesting and the same strategy code for live deployment.
+  markets:
+  - multi-asset
+  mode: research
+  language: Rust
+  added: '2026-10-28'
+- name: NOF0
+  repo: wquguru/nof0
+  section: evaluation
+  description: Open reproduction of the NOF1 Alpha Arena that runs several LLM agents from equal starting capital on live crypto markets and compares their results.
+  markets:
+  - crypto
+  mode: paper
+  language: Go
+  added: '2026-10-28'
+- name: Qlib
+  repo: microsoft/qlib
+  section: evaluation
+  description: AI-oriented quant research platform from Microsoft covering data, model training, backtesting and the RD-Agent automated research loop.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: StockBench
+  repo: ChenYXxxx/stockbench
+  section: evaluation
+  description: Benchmark that evaluates LLMs on multi-step stock trading decisions using post-2024 price, fundamental and news data to avoid training contamination.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: TraderHarness
+  repo: HephaestLab/TraderHarness
+  section: evaluation
+  description: Leakage-resistant backtesting, deterministic replay and training-trajectory generation for LLM trading agents, with A-share support.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: vectorbt
+  repo: polakowo/vectorbt
+  section: evaluation
+  description: Vectorised backtesting and research engine for testing large numbers of trading ideas quickly in Python.
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: What LLM Trading Agents Actually Do in Production
+  repo: ProjectDXAI/continuous-record-llm-trading-agents
+  section: evaluation
+  description: Paper artifacts and aggregate data from a six-month record of thousands of user-funded LLM trading agents on Base, with findings on sizing and profit capture.
+  markets:
+  - crypto
+  mode: research
+  added: '2026-10-28'
+- name: AI-Trader
+  repo: HKUDS/AI-Trader
+  section: benchmarks
+  description: Agent-native trading arena where any coding agent registers via a SKILL.md and trades on a shared simulated venue alongside other agents, with a public leaderboard.
+  markets:
+  - multi-asset
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Alpha Arena (nof1.ai)
+  url: https://alphaarena.ai/
+  section: benchmarks
+  description: Live real-money competition run by the research lab nof1.ai in which frontier LLMs each receive $10,000 to trade crypto perpetuals on Hyperliquid under an identical prompt; Season 1 (Oct-Nov 2025) saw four of six models lose money.
+  year: 2025
+  featured: true
+  added: '2026-10-28'
+- name: 2010 Flash Crash joint SEC-CFTC report
+  url: https://www.sec.gov/files/marketevents-report.pdf
+  section: incidents
+  description: 2010-05-06. Official staff report attributes the crash to a single $4.1 billion automated sell algorithm executing 75,000 E-mini contracts at a fixed share of volume regardless of price or time, amplified by HFT liquidity withdrawal and inconsistent exchange rules.
+  year: 2010
+  added: '2026-10-28'
+- name: AIXBT agent wallet drained via queued prompts
+  url: https://incidentdatabase.ai/cite/1003
+  section: incidents
+  description: 2025-03-18. An attacker accessed the dashboard of the autonomous crypto agent AIXBT and queued two prompts instructing it to transfer 55.5 ETH (about $106,000) from its wallet; the maintainer said the model itself was not manipulated, showing that an agent's control plane is part of its attack surface.
+  year: 2025
+  added: '2026-10-28'
+- name: Alpha Arena Season 1 - four of six LLMs lose money
+  url: https://forklog.com/en/four-out-of-six-ai-models-suffer-losses-in-trading-tournament/
+  section: incidents
+  description: 2025-11-03. In nof1.ai's live $10,000-per-model crypto contest, Qwen3 Max ($12,231) and DeepSeek ($10,489) finished up while Claude Sonnet 4.5 ($5,799), Gemini 2.5 Pro ($5,445), Grok 4 ($4,208) and GPT-5 ($4,126) lost 42-59%; lesson is that an unconstrained LLM given capital and a prompt overtrades and shows persistent biases.
+  year: 2025
+  added: '2026-10-28'
+- name: Grok/Bankr wallet drained by Morse-code prompt injection
+  url: https://giskard.ai/knowledge/how-grok-got-prompt-injected-an-x-user-drained-150-000-from-an-ai-wallet
+  section: incidents
+  description: 2026-05-04. An X user sent a membership NFT that unlocked transfer rights on a Bankr-provisioned wallet for Grok, then posted a Morse-encoded message that Grok decoded publicly and Bankrbot executed as a transfer of 3 billion DRB tokens (~$150-200k); most funds were later returned, but the case shows decoded text must never be treated as a command.
+  year: 2026
+  added: '2026-10-28'
+- name: Knight Capital erroneous-order loss
+  url: https://www.sec.gov/news/press-release/2013-222
+  section: incidents
+  description: 2012-08-01. Old code left in an order router plus a faulty deployment sent more than 4 million orders in 45 minutes against 212 intended customer orders, costing over $460 million; the SEC later fined Knight $12 million under the Market Access Rule and noted 97 pre-open alert emails were ignored.
+  year: 2012
+  added: '2026-10-28'
+- name: Lobstar Wilde bot sends $440k of tokens instead of 4 SOL
+  url: https://www.theblock.co/post/390722/ai-agent-created-by-openai-dev-accidentally-sends-entire-memecoin-holdings-to-reply-guy
+  section: incidents
+  description: 2026-02-22. An autonomous Solana trading agent built by OpenAI engineer Nik Pash replied to a user's request for 4 SOL by transferring about 52.4 million LOBSTAR tokens (5% of supply, later valued at ~$440,000), apparently from a unit/decimal misread of an API response; irreversible on-chain transfers need hard spend limits.
+  year: 2026
+  added: '2026-10-28'
+- name: CFTC Electronic Trading Risk Principles (final rule)
+  url: https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2020-27622.html
+  section: regulation
+  description: 2020 principles-based rule (replacing the withdrawn Regulation AT) requiring designated contract markets to adopt rules and pre-trade risk controls that limit disruptions from electronic trading and to notify the CFTC of significant disruptions.
+  year: 2020
+  added: '2026-10-28'
+- name: ESMA Supervisory Briefing on Algorithmic Trading
+  url: https://www.esma.europa.eu/press-news/esma-news/esma-issues-supervisory-briefing-algorithmic-trading
+  section: regulation
+  description: February 2026 non-binding briefing giving EU national regulators common expectations on pre-trade controls, governance, testing and outsourcing under MiFID II, and adding considerations for supervising the use of AI in algorithmic trading.
+  year: 2026
+  added: '2026-10-28'
+- name: FCA - Algorithmic Trading Compliance in Wholesale Markets
+  url: https://www.fca.org.uk/publications/multi-firm-reviews/algorithmic-trading-compliance-wholesale-markets
+  section: regulation
+  description: 2018 UK FCA multi-firm review setting out good and poor practice in five areas - defining algorithmic trading, development and testing, risk controls, governance and oversight, and market conduct.
+  year: 2018
+  added: '2026-10-28'
+- name: FINRA 2026 Regulatory Oversight Report - GenAI and AI agents
+  url: https://www.finra.org/rules-guidance/guidance/reports/2026-finra-annual-regulatory-oversight-report/gen-ai
+  section: regulation
+  description: December 2025 section that for the first time addresses AI agents, naming autonomy without human approval, scope creep beyond user intent, auditability of multi-step reasoning, data sensitivity and poorly designed reward functions as risks, and asking firms to decide where humans stay in the loop.
+  year: 2025
+  added: '2026-10-28'
+- name: FINRA Regulatory Notice 15-09 - Algorithmic Trading Supervision and Control
+  url: https://www.finra.org/rules-guidance/notices/15-09
+  section: regulation
+  description: 2015 FINRA guidance on effective supervision and control practices for firms running algorithmic strategies, covering risk assessment, code development, testing and validation, trading-system controls and compliance.
+  year: 2015
+  added: '2026-10-28'
+- name: MiFID II RTS 6 - Commission Delegated Regulation (EU) 2017/589
+  url: https://eur-lex.europa.eu/eli/reg_del/2017/589/oj
+  section: regulation
+  description: EU regulatory technical standard on organisational requirements for investment firms engaged in algorithmic trading, mandating pre-deployment testing in non-production environments, kill functionality, pre-trade controls (price collars, order and message limits), annual self-assessment and five-year records.
+  year: 2017
+  added: '2026-10-28'
+- name: SEC Division of Examinations FY2026 Priorities
+  url: https://www.sec.gov/files/2026-exam-priorities.pdf
+  section: regulation
+  description: November 2025 priorities stating examiners will review the accuracy of firms' AI-related representations and whether policies, controls and human oversight adequately supervise automated advisory tools and trading algorithms.
+  year: 2025
+  added: '2026-10-28'
+- name: a-stock-data
+  repo: simonlin1212/a-stock-data
+  section: chinese
+  description: A-share data toolkit for AI agents covering K-lines, ticks, reports, flows, news, financials, ETF and options, convertible bonds and futures across dozens of sources.
+  markets:
+  - equities
+  - futures
+  - options
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: A_Share_investment_Agent
+  repo: 24mlight/A_Share_investment_Agent
+  section: chinese
+  description: Multi-agent LLM investment system for A-shares where bull and bear researchers and analysts debate before a decision; educational proof of concept.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: abu
+  repo: bbfamily/abu
+  section: chinese
+  description: Long-running Chinese open-source quant framework for stocks, options, futures and bitcoin with machine-learning strategy tooling (pre-LLM, foundational).
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: easy-stock
+  repo: jundizhou/easy-stock
+  section: chinese
+  description: A 股行情分析与 AI 投研智能体桌面工作台，覆盖个股分析、量化分析和盘后复盘。Desktop workbench with an AI research agent for mainland A-share analysis, quant screening and post-close review.
+  markets:
+  - equities
+  mode: research
+  language: Go
+  added: '2026-10-28'
+- name: FinanceMCP
+  repo: guangxiangdebizi/FinanceMCP
+  section: chinese
+  description: MCP server over Tushare and Binance giving LLMs Chinese stock, fund, bond, macro and crypto data plus financial news.
+  markets:
+  - multi-asset
+  mode: library
+  language: TypeScript
+  added: '2026-10-28'
+- name: PanWatch
+  repo: TNT-Likely/PanWatch
+  section: chinese
+  description: Stock monitoring service for A-shares, HK and US markets built on TradingAgents, with portfolio insights, alerts and scheduled reports.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: TradingAgents-CN
+  repo: hsliuping/TradingAgents-CN
+  section: chinese
+  description: Chinese-enhanced fork of TradingAgents with A-share and HK data sources, Chinese LLM backends and a web UI.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Vibe-Research
+  repo: simonlin1212/Vibe-Research
+  section: chinese
+  description: Research workbench for A-shares, US and HK stocks with watchlists, daily reviews, industry research, backtests and a report library, driven by Claude Code, Codex or any model API.
+  markets:
+  - equities
+  mode: research
+  language: TypeScript
+  added: '2026-10-28'
+- name: WyckoffTradingAgent
+  repo: YoungCan-Wang/WyckoffTradingAgent
+  section: chinese
+  description: Wyckoff volume-price analysis agent and AI stock screener for A-shares with CLI workflows and MCP tools.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Awesome Prediction Market Tools
+  repo: aarora4/Awesome-Prediction-Market-Tools
+  section: related_lists
+  description: Curated list of prediction market tools including agents, analytics, APIs, dashboards and copy trading.
+  markets:
+  - prediction-markets
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-crypto-trading-bots
+  repo: botcrypto-io/awesome-crypto-trading-bots
+  section: related_lists
+  description: Curated list of open-source crypto trading bots and related tooling.
+  markets:
+  - crypto
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-finance-mcp
+  repo: BlockRunAI/awesome-finance-mcp
+  section: related_lists
+  description: Curated list of MCP servers for AI finance agents.
+  markets:
+  - multi-asset
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-quant
+  repo: wilsonfreitas/awesome-quant
+  section: related_lists
+  description: Curated list of libraries, packages and resources for quantitative finance.
+  markets:
+  - multi-asset
+  mode: library
+  language: HTML
+  added: '2026-10-28'
+- name: awesome-quant (thuquant)
+  repo: thuquant/awesome-quant
+  section: related_lists
+  description: Index of Chinese quant resources, data sources and tools.
+  markets:
+  - multi-asset
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-systematic-trading
+  repo: paperswithbacktest/awesome-systematic-trading
+  section: related_lists
+  description: Curated list of libraries, strategies, books and tutorials for systematic trading.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: awesome-trading-agents
+  repo: LLMQuant/awesome-trading-agents
+  section: related_lists
+  description: Curated list of LLM-driven trading agents, MCP servers and agent skills for research, strategy and execution.
+  markets:
+  - multi-asset
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: financial-machine-learning
+  repo: firmai/financial-machine-learning
+  section: related_lists
+  description: Curated list of practical financial machine learning tools and applications (last pushed January 2025).
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
