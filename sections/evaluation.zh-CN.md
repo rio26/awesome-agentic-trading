@@ -5,7 +5,7 @@
 
 在策略碰到真钱之前测试它的引擎和工具。对 LLM 智能体来说，额外的风险是模型训练数据带来的前视偏差。
 
-共 8 条，按 star 排序。 新增条目请编辑 `data/entries/evaluation.yaml`。
+共 9 条，按 star 排序。 新增条目请编辑 `data/entries/evaluation.yaml`。
 
 - [Qlib](https://github.com/microsoft/qlib) - 微软出品的 AI 导向量化研究平台，覆盖数据、模型训练、回测和 RD-Agent 自动化研究循环。 `equities` `research` <img src="https://img.shields.io/github/stars/microsoft/qlib?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [Nautilus Trader](https://github.com/nautechsystems/nautilus_trader) - Rust 原生的事件驱动交易引擎，回测确定可复现，同一套策略代码可直接实盘部署。 `multi-asset` `research` <img src="https://img.shields.io/github/stars/nautechsystems/nautilus_trader?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
@@ -13,6 +13,7 @@
 - [backtesting.py](https://github.com/kernc/backtesting.py) - 轻量级 Python 回测库，基于 OHLC 数据测试交易策略，带交互式图表。 `multi-asset` `research` <img src="https://img.shields.io/github/stars/kernc/backtesting.py?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [NOF0](https://github.com/wquguru/nof0) - NOF1 Alpha Arena 的开源复现，让多个 LLM 智能体以相同本金在加密货币实盘上运行并比较结果。 · 10 个月无提交 `crypto` `paper` <img src="https://img.shields.io/github/stars/wquguru/nof0?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [StockBench](https://github.com/ChenYXxxx/stockbench) - 用 2024 年以后的价格、基本面和新闻数据评测 LLM 多步股票交易决策的基准，避免训练数据污染。 · 12 个月无提交 `equities` `research` <img src="https://img.shields.io/github/stars/ChenYXxxx/stockbench?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
+- [edge-stats](https://github.com/LuxAlgo/edge-stats) - 开源交易统计引擎，在你自己的 K 线上计算 P(结果 | 条件)，适用于缺口回补、开盘区间突破、初始平衡等交易设定。 `multi-asset` `library` <img src="https://img.shields.io/github/stars/LuxAlgo/edge-stats?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [What LLM Trading Agents Actually Do in Production](https://github.com/ProjectDXAI/continuous-record-llm-trading-agents) - 对 Base 链上数千个用户出资的 LLM 交易智能体六个月记录的论文产物和汇总数据，含仓位规模与利润兑现方面的发现。 `crypto` `research` <img src="https://img.shields.io/github/stars/ProjectDXAI/continuous-record-llm-trading-agents?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [TraderHarness](https://github.com/HephaestLab/TraderHarness) - 面向 LLM 交易智能体的防泄漏回测、确定性回放和训练轨迹生成，支持 A 股。 `equities` `research` <img src="https://img.shields.io/github/stars/HephaestLab/TraderHarness?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 

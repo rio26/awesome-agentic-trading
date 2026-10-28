@@ -79,3 +79,13 @@
   mode: research
   added: '2026-10-28'
   description_zh: 对 Base 链上数千个用户出资的 LLM 交易智能体六个月记录的论文产物和汇总数据，含仓位规模与利润兑现方面的发现。
+- name: edge-stats
+  repo: LuxAlgo/edge-stats
+  section: evaluation
+  description: Open-source trading statistics engine that answers P(outcome | conditions) over your own bars, for setups such as gap fills, opening-range breakouts and initial balance.
+  description_zh: 开源交易统计引擎，在你自己的 K 线上计算 P(结果 | 条件)，适用于缺口回补、开盘区间突破、初始平衡等交易设定。
+  markets:
+  - multi-asset
+  mode: library
+  language: TypeScript
+  added: '2026-10-28'

@@ -13,7 +13,7 @@ An entry must meet all of these:
 5. **No signal-selling.** No paid signal groups, copy-trading funnels, token launches, "guaranteed returns", or projects whose README is mostly a Telegram link.
 6. **Activity.** Code entries should have a commit in the last six months, or be foundational enough that staleness does not matter (we say so in the description).
 
-The weekly job marks entries that go quiet; maintainers remove them after a further six months or when the project is archived.
+The weekly job marks entries that go quiet; maintainers remove them after a further six months or when the project is archived. Repositories the scout surfaced and a maintainer turned down are recorded in `data/reviewed.yaml` with the reason, so they are not re-surfaced and the decision is public.
 
 ## How to add an entry
 

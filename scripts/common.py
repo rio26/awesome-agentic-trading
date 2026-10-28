@@ -20,6 +20,8 @@ ENTRIES_DIR = DATA_DIR / "entries"          # one YAML file per section: data/en
 SECTIONS_FILE = DATA_DIR / "sections.yaml"
 SECTIONS_OUT = ROOT / "sections"            # generated per-section pages
 METADATA_FILE = DATA_DIR / "metadata.json"
+REVIEWED_FILE = DATA_DIR / "reviewed.yaml"
+SEED_DATE = "2026-10-28"  # entries added after this date count as "recently added"
 
 MARKETS = {"equities", "crypto", "futures", "options", "forex", "prediction-markets", "multi-asset"}
 MODES = {"live", "paper", "research", "library"}
@@ -100,6 +102,19 @@ def validate(entries: list[dict], sections: list[dict]) -> list[str]:
 
 def entry_url(e: dict) -> str:
     return e.get("url") or f"https://github.com/{e['repo']}"
+
+
+def load_reviewed() -> list[dict]:
+    """Scout decisions already taken: rejected repos and held ones with a revisit date."""
+    if not REVIEWED_FILE.exists():
+        return []
+    items = load_yaml(REVIEWED_FILE) or []
+    for r in items:
+        if r.get("decision") not in ("rejected", "hold") or not r.get("repo"):
+            raise DataError(f"{REVIEWED_FILE}: each item needs repo and decision (rejected|hold): {r}")
+        if r["decision"] == "hold" and not r.get("revisit"):
+            raise DataError(f"{REVIEWED_FILE}: hold for {r['repo']} needs a revisit date")
+    return items
 
 
 def load_metadata() -> dict[str, dict]:

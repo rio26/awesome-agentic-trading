@@ -27,6 +27,9 @@ jobs:
       - name: Scout for new and rising repositories
         run: python scripts/scout.py --days 7 --min-stars 20 --report scout.md
 
+      - name: Check external links
+        run: python scripts/check_links.py --report links.md
+
       - name: Regenerate README and section pages with fresh metadata
         run: python scripts/build_readme.py
 
@@ -45,6 +48,6 @@ jobs:
       - name: Open the weekly report issue
         run: |
           title="Weekly report $(date -u +%F)"
-          { cat scout.md; echo; cat stale.md; } > report.md
+          { cat scout.md; echo; cat stale.md; echo; cat links.md; } > report.md
           gh issue create --title "$title" --body-file report.md --label weekly-report \
             || gh issue create --title "$title" --body-file report.md

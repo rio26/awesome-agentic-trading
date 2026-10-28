@@ -11,14 +11,14 @@ Open-source LLM trading agents, the MCP servers that feed and execute for them, 
 
 ![Agentic trading landscape: data, decision, execution, risk, evaluation](docs/landscape.svg)
 
-Each section shows its top five by stars; the `All N →` link opens the full page. Entries quiet for six months are marked, not removed. [Criteria](CONTRIBUTING.md) · not investment advice.
+Each section shows its top five by stars; the `All N →` link opens the full page. Entries quiet for six months are marked, not removed. [Weekly reports](reports/README.md) · [Criteria](CONTRIBUTING.md) · not investment advice.
 
 ## Contents
 
 | | | |
 |---|---|---|
 | [Trading agents & frameworks](#trading-agents--frameworks) (14) | [Prediction-market agents](#prediction-market-agents) (12) | [Market data & research tools](#market-data--research-tools) (9) |
-| [Execution: broker & exchange access](#execution-broker--exchange-access) (9) | [Risk & guardrails](#risk--guardrails) (6) | [Backtesting & evaluation](#backtesting--evaluation) (8) |
+| [Execution: broker & exchange access](#execution-broker--exchange-access) (9) | [Risk & guardrails](#risk--guardrails) (6) | [Backtesting & evaluation](#backtesting--evaluation) (9) |
 | [Benchmarks & leaderboards](#benchmarks--leaderboards) (2) | [Incidents & postmortems](#incidents--postmortems) (6) | [Regulation & compliance](#regulation--compliance) (7) |
 | [Chinese & A-share tools](#chinese--a-share-tools) (9) | [Related lists](#related-lists) (8) |  |
 
@@ -39,7 +39,7 @@ Open-source systems where an LLM (or a team of them) reads the market and decide
 - [AI Hedge Fund](https://github.com/virattt/ai-hedge-fund) - Team of LLM agents modelled on well-known investors that debate and produce portfolio decisions for US equities, with a backtester and web UI.
 - [Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) - Personal trading agent with a FastAPI backend and React frontend that gives a coding agent market data, analysis and trading capabilities through one install.
 - [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) - Open financial LLMs and fine-tuning recipes from AI4Finance for sentiment, forecasting and retrieval tasks used by trading agents.
-- [NoFx](https://github.com/NoFxAiOS/nofx) - AI trading terminal assistant written in Go for US stocks, commodities, forex and crypto.
+- [NoFx](https://github.com/NoFxAiOS/nofx) - Self-hosted AI trading system in Go: Frontier drafts entry plans that you approve order by order, Autopilot runs a configured strategy continuously; routes orders to Binance USDT perpetuals, Hyperliquid, OKX and Bitget.
 
 **[All 14 →](sections/agents.md)**
 
@@ -101,7 +101,7 @@ Engines and harnesses for testing a strategy before it touches money. For LLM ag
 - [backtesting.py](https://github.com/kernc/backtesting.py) - Lightweight Python library for backtesting trading strategies on OHLC data with interactive plots.
 - [NOF0](https://github.com/wquguru/nof0) - Open reproduction of the NOF1 Alpha Arena that runs several LLM agents from equal starting capital on live crypto markets and compares their results. · no commits in 10 months
 
-**[All 8 →](sections/evaluation.md)**
+**[All 9 →](sections/evaluation.md)**
 
 ## Benchmarks & leaderboards
 
@@ -165,4 +165,4 @@ One entry per pull request, into the section's file under [`data/entries/`](data
 ## License
 
 [MIT](LICENSE). Linked projects keep their own licenses.
-<!-- entries: 90 -->
+<!-- entries: 91 -->

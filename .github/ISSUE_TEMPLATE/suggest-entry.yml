@@ -1,0 +1,67 @@
+name: Suggest an entry
+description: Propose a repository or primary source for the list. One per issue.
+title: "Add: <name>"
+labels: [suggestion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. Read the [criteria](../blob/main/CONTRIBUTING.md) first: open source or a primary source, runs today, an agent in the loop, honest about mode, no signal-selling. A pull request into `data/entries/<section>.yaml` is also welcome.
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: GitHub repository (owner/name) or the URL of a primary source.
+      placeholder: owner/name
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Trading agents & frameworks
+        - Prediction-market agents
+        - Market data & research tools
+        - "Execution: broker & exchange access"
+        - Risk & guardrails
+        - Backtesting & evaluation
+        - Benchmarks & leaderboards
+        - Incidents & postmortems
+        - Regulation & compliance
+        - Chinese & A-share tools
+        - Related lists
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-sentence description
+      description: What it does, not how great it is. No emojis.
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      description: live places real orders; paper simulates; research is backtests and studies; library is a building block.
+      options: [live, paper, research, library, not code]
+    validations:
+      required: true
+  - type: input
+    id: markets
+    attributes:
+      label: Markets
+      placeholder: "equities, crypto, prediction-markets, futures, options, forex, multi-asset"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: It is open source with a license, or it is a primary source (paper, regulator, postmortem, reputable report).
+          required: true
+        - label: It runs from its README today, or the event it describes is sourced.
+          required: true
+        - label: It is not a paid signal group, copy-trading funnel or token launch.
+          required: true
+        - label: I am the author or maintainer (fine, just say so).

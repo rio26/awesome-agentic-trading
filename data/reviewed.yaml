@@ -1,0 +1,34 @@
+# Repositories the scout has already surfaced and a maintainer has decided on.
+# `rejected` entries are never shown again. `hold` entries are hidden until `revisit`,
+# then come back flagged `revisit`. Keep the reason short and factual; it is public.
+
+- repo: Polytutor-AI-Labs/polymarket-black-scholes-hft-bot
+  decision: rejected
+  date: 2026-10-28
+  reason: No license, single commit, zero forks; sibling repo is a consulting advert.
+- repo: Polytutor-AI-Labs/polymarket-trading-bot-strategy
+  decision: rejected
+  date: 2026-10-28
+  reason: Consulting advert with WeChat/Telegram contacts, not a runnable project.
+- repo: Polytutor-AI-Labs/predictfun-market-maker-trading-bot
+  decision: rejected
+  date: 2026-10-28
+  reason: No license, single commit, zero forks, same-day star burst across sibling repos.
+- repo: cxmza/windle
+  decision: rejected
+  date: 2026-10-28
+  reason: Token launch (contract address in README); not a trading agent.
+- repo: Nour-Br/Kalshi-crypto-15m-trading-bot
+  decision: rejected
+  date: 2026-10-28
+  reason: No license; README is a Telegram contact; describes itself as not using AI.
+- repo: jacke-pp/ai-wallet-binance
+  decision: hold
+  date: 2026-10-28
+  revisit: 2026-11-04
+  reason: Three days old with 138 stars from one contributor; check whether growth is organic.
+- repo: livetennisapi/polymarket-tennis
+  decision: hold
+  date: 2026-10-28
+  revisit: 2026-11-04
+  reason: Candid and MIT, but 221 forks on 261 stars is an unusual ratio; re-check.

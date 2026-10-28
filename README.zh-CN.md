@@ -11,14 +11,14 @@
 
 ![智能体交易流水线：数据、决策、执行、风控、评测](docs/landscape.zh-CN.svg)
 
-每个板块只列按 star 排的前五条，`全部 N 条 →` 打开完整页面。半年没动静的条目会被标注而不是删除。[收录标准](CONTRIBUTING.md) · 不构成投资建议。
+每个板块只列按 star 排的前五条，`全部 N 条 →` 打开完整页面。半年没动静的条目会被标注而不是删除。[每周周报](reports/README.md) · [收录标准](CONTRIBUTING.md) · 不构成投资建议。
 
 ## 目录
 
 | | | |
 |---|---|---|
 | [交易智能体与框架](#交易智能体与框架) (14) | [预测市场智能体](#预测市场智能体) (12) | [行情数据与研究工具](#行情数据与研究工具) (9) |
-| [执行：券商与交易所接入](#执行券商与交易所接入) (9) | [风控与护栏](#风控与护栏) (6) | [回测与评测](#回测与评测) (8) |
+| [执行：券商与交易所接入](#执行券商与交易所接入) (9) | [风控与护栏](#风控与护栏) (6) | [回测与评测](#回测与评测) (9) |
 | [基准与排行榜](#基准与排行榜) (2) | [事故与复盘](#事故与复盘) (6) | [监管与合规](#监管与合规) (7) |
 | [中文资源 · A 股工具](#中文资源--a-股工具) (9) | [相关列表](#相关列表) (8) |  |
 
@@ -39,7 +39,7 @@
 - [AI Hedge Fund](https://github.com/virattt/ai-hedge-fund) - 一组以知名投资人为原型的 LLM 智能体，相互辩论后给出美股组合决策，自带回测器和 Web 界面。
 - [Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) - 个人交易智能体，FastAPI 后端加 React 前端，一次安装即可让编码智能体获得行情、分析和交易能力。
 - [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) - AI4Finance 出品的开源金融大模型和微调方案，面向交易智能体常用的情绪分析、预测和检索任务。
-- [NoFx](https://github.com/NoFxAiOS/nofx) - 用 Go 编写的 AI 交易终端助手，覆盖美股、大宗商品、外汇和加密货币。
+- [NoFx](https://github.com/NoFxAiOS/nofx) - 自托管的 Go 语言 AI 交易系统：Frontier 模式生成入场方案由你逐笔批准，Autopilot 模式按配置的策略持续运行；订单路由到 Binance USDT 永续、Hyperliquid、OKX 和 Bitget。
 
 **[全部 14 条 →](sections/agents.zh-CN.md)**
 
@@ -101,7 +101,7 @@
 - [backtesting.py](https://github.com/kernc/backtesting.py) - 轻量级 Python 回测库，基于 OHLC 数据测试交易策略，带交互式图表。
 - [NOF0](https://github.com/wquguru/nof0) - NOF1 Alpha Arena 的开源复现，让多个 LLM 智能体以相同本金在加密货币实盘上运行并比较结果。 · 10 个月无提交
 
-**[全部 8 条 →](sections/evaluation.zh-CN.md)**
+**[全部 9 条 →](sections/evaluation.zh-CN.md)**
 
 ## 基准与排行榜
 
@@ -165,4 +165,4 @@ LLM 智能体相互之间或与市场公开对垒的实盘竞技场和排行榜�
 ## 许可证
 
 [MIT](LICENSE)。被链接的项目各自保留其许可证。
-<!-- entries: 90 -->
+<!-- entries: 91 -->

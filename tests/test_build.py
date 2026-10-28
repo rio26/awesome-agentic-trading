@@ -187,3 +187,58 @@ def test_scout_flags_mark_the_common_junk_patterns():
     clean = {"full_name": "a/c", "name": "c", "stargazers_count": 150, "forks_count": 20,
              "license": {"spdx_id": "MIT"}, "description": "Does a thing."}
     assert scout.flags(clean, 30) == []
+
+
+def test_reviewed_rejected_and_future_holds_are_hidden_and_due_holds_are_flagged():
+    reviewed = [{"repo": "a/rejected", "decision": "rejected"},
+                {"repo": "a/held-future", "decision": "hold", "revisit": "2999-01-01"},
+                {"repo": "a/held-due", "decision": "hold", "revisit": "2000-01-01"}]
+    hidden, due = scout.reviewed_state(reviewed, "2026-10-28")
+    assert hidden == {"a/rejected", "a/held-future"} and set(due) == {"a/held-due"}
+    now = datetime.now(timezone.utc)
+    def item(name):
+        return {"full_name": name, "name": name.split("/")[1], "stargazers_count": 100, "forks_count": 5,
+                "license": {"spdx_id": "MIT"}, "created_at": (now - timedelta(days=30)).isoformat(),
+                "language": "Python", "description": "x", "_pass": "new"}
+    rows = scout.rank({k: item(k) for k in ("a/rejected", "a/held-future", "a/held-due", "a/fresh")}, set(), [], reviewed)
+    assert sorted(r["repo"] for r in rows) == ["a/fresh", "a/held-due"]
+    assert next(r for r in rows if r["repo"] == "a/held-due")["flags"] == "revisit"
+
+
+def test_recently_added_lists_only_entries_after_the_seed_date(monkeypatch):
+    monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
+    seed = entry(name="Seed", repo="octo/seed", added="2026-10-28")
+    new = entry(name="New", repo="octo/new", added="2026-11-02")
+    out = build_readme.render_readme([seed, new], SECTIONS, {})
+    assert "## Recently added" in out and "[New](https://github.com/octo/new) - Does a thing. `2026-11-02`" in out
+    assert "## Recently added" not in build_readme.render_readme([seed], SECTIONS, {})
+    assert "## 最近新增" in build_readme.render_readme([seed, new], SECTIONS, {}, lang="zh")
+
+
+def test_shipped_reviewed_file_is_valid():
+    items = common.load_reviewed()
+    assert all(r["decision"] in ("rejected", "hold") for r in items)
+    assert all("reason" in r for r in items)
+
+
+def test_new_report_fills_data_sections_and_refuses_to_overwrite(tmp_path, monkeypatch):
+    import new_report
+    reports = tmp_path / "reports"
+    reports.mkdir()
+    (reports / "_template.md").write_text((ROOT / "reports" / "_template.md").read_text())
+    (reports / "2026-10-28.md").write_text("old")
+    monkeypatch.setattr(new_report, "REPORTS", reports)
+    monkeypatch.setattr(new_report, "TEMPLATE", reports / "_template.md")
+    monkeypatch.setattr(new_report, "ROOT", tmp_path)
+    assert new_report.main(["--date", "2026-11-04"]) == 0
+    text = (reports / "2026-11-04.md").read_text()
+    assert "# Weekly report 2026-11-04" in text and "Previous: [2026-10-28](2026-10-28.md)" in text
+    assert "not investment advice" in text and "{{" not in text
+    assert new_report.main(["--date", "2026-11-04"]) == 1  # refuses to overwrite
+
+
+def test_first_report_exists_and_carries_the_disclaimer():
+    text = (ROOT / "reports" / "2026-10-28.md").read_text()
+    assert "not investment advice" in text.lower()
+    assert "## Opportunities and open questions" in text
+    assert "2026-10-28.md" in (ROOT / "reports" / "README.md").read_text()

@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import (  # noqa: E402
-    ROOT, SECTIONS_OUT, STALE_DAYS, DataError, days_since, entry_url, load_entries, load_metadata,
+    ROOT, SECTIONS_OUT, SEED_DATE, STALE_DAYS, DataError, days_since, entry_url, load_entries, load_metadata,
     load_sections, validate,
 )
 
@@ -31,6 +31,7 @@ T = {
         "readme": "README.md", "suffix": "", "header": "header.md", "footer": "footer.md",
         "contents": "Contents", "start_here": "Start here",
         "start_blurb": "A few entries that give the shape of the field in an evening.",
+        "recent": "Recently added",
         "all": "All {n} →", "entries_by_stars": "{n} entries, by stars.", "entries_by_year": "{n} entries, newest first.",
         "edit": "Add one by editing `data/entries/{key}.yaml`.", "back": "← README", "lang_switch": "[简体中文]({page})",
         "archived": "archived", "stale": "no commits in {m} months",
@@ -39,6 +40,7 @@ T = {
         "readme": "README.zh-CN.md", "suffix": ".zh-CN", "header": "header.zh-CN.md", "footer": "footer.zh-CN.md",
         "contents": "目录", "start_here": "从这里开始",
         "start_blurb": "一个晚上就能看出这个领域大致轮廓的几条。",
+        "recent": "最近新增",
         "all": "全部 {n} 条 →", "entries_by_stars": "共 {n} 条，按 star 排序。", "entries_by_year": "共 {n} 条，最新在前。",
         "edit": "新增条目请编辑 `data/entries/{key}.yaml`。", "back": "← 首页", "lang_switch": "[English]({page})",
         "archived": "已归档", "stale": "{m} 个月无提交",
@@ -137,6 +139,11 @@ def render_readme(entries: list[dict], sections: list[dict], meta: dict, lang: s
         body += [f"## {t['start_here']}", "", t["start_blurb"], ""]
         body += [render_entry(e, meta, lang) for e in featured[:5]]
         body.append("")
+
+    recent = sorted((e for e in entries if str(e.get("added", "")) > SEED_DATE),
+                    key=lambda e: (str(e["added"]), e["name"].lower()), reverse=True)[:10]
+    if recent:
+        body += [f"## {t['recent']}", ""] + [render_entry(e, meta, lang) + f" `{e['added']}`" for e in recent] + [""]
 
     for s in sections:
         items = ordered(by_section[s["key"]], s, meta)

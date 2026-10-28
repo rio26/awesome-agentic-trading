@@ -11,4 +11,4 @@ Open-source LLM trading agents, the MCP servers that feed and execute for them, 
 
 ![Agentic trading landscape: data, decision, execution, risk, evaluation](docs/landscape.svg)
 
-Each section shows its top five by stars; the `All N →` link opens the full page. Entries quiet for six months are marked, not removed. [Criteria](CONTRIBUTING.md) · not investment advice.
+Each section shows its top five by stars; the `All N →` link opens the full page. Entries quiet for six months are marked, not removed. [Weekly reports](reports/README.md) · [Criteria](CONTRIBUTING.md) · not investment advice.

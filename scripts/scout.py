@@ -22,7 +22,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import gh_get, load_entries  # noqa: E402
+from common import gh_get, load_entries, load_reviewed  # noqa: E402
 
 # Topic and free-text queries. Kept short on purpose: each is one search call.
 TOPIC_QUERIES = [
@@ -85,12 +85,26 @@ def flags(item: dict, age_days: int) -> list[str]:
     return out
 
 
-def rank(found: dict[str, dict], listed: set[str], exclude: list[str]) -> list[dict]:
+def reviewed_state(reviewed: list[dict], today: str) -> tuple[set[str], dict[str, dict]]:
+    """Repos to hide (rejected, or held until a future date) and held repos now due for a second look."""
+    hidden: set[str] = set()
+    due: dict[str, dict] = {}
+    for r in reviewed:
+        key = r["repo"].lower()
+        if r["decision"] == "rejected" or str(r.get("revisit")) > today:
+            hidden.add(key)
+        else:
+            due[key] = r
+    return hidden, due
+
+
+def rank(found: dict[str, dict], listed: set[str], exclude: list[str], reviewed: list[dict] | None = None) -> list[dict]:
     now = datetime.now(timezone.utc)
     patterns = [re.compile(p, re.I) for p in exclude]
+    hidden, due = reviewed_state(reviewed or [], now.strftime("%Y-%m-%d"))
     rows = []
     for key, item in found.items():
-        if key in listed or any(p.search(item["name"]) for p in patterns):
+        if key in listed or key in hidden or any(p.search(item["name"]) for p in patterns):
             continue
         created = datetime.fromisoformat(item["created_at"].replace("Z", "+00:00"))
         age = max(1, (now - created).days)
@@ -102,7 +116,7 @@ def rank(found: dict[str, dict], listed: set[str], exclude: list[str]) -> list[d
             "language": item.get("language") or "-",
             "license": (item.get("license") or {}).get("spdx_id") or "none",
             "forks": item.get("forks_count", 0),
-            "flags": " ".join(flags(item, age)),
+            "flags": " ".join((["revisit"] if key in due else []) + flags(item, age)),
             "description": (item.get("description") or "").strip().replace("|", "/")[:120],
             "pass": item["_pass"],
         })
@@ -122,7 +136,8 @@ def report(rows: list[dict], days: int) -> str:
             f"{r['velocity']:.1f} | {r['language']} | {r['license']} | {r['flags']} | {r['description']} |"
         )
     lines += ["", "Flags: `no-license`, `0-forks` (50+ stars, none), `fast-stars` (>30/day in the first week), "
-              "`contact-funnel` (Telegram/WeChat/WhatsApp in the description). A flag means look closer, not reject."]
+              "`contact-funnel` (Telegram/WeChat/WhatsApp in the description), `revisit` (held earlier, now due). "
+              "A flag means look closer, not reject. Decisions go in `data/reviewed.yaml` so they are not re-surfaced."]
     lines += ["", f"{len(rows)} candidates in total; top 40 shown. Add the good ones to the matching file under `data/entries/`.", ""]
     return "\n".join(lines)
 
@@ -137,7 +152,7 @@ def main(argv=None) -> int:
 
     listed = {e["repo"].lower() for e in load_entries() if e.get("repo")}
     found = collect(args.days, args.min_stars)
-    rows = rank(found, listed, DEFAULT_EXCLUDE + args.exclude)
+    rows = rank(found, listed, DEFAULT_EXCLUDE + args.exclude, load_reviewed())
     text = report(rows, args.days)
     print(text)
     if args.report:

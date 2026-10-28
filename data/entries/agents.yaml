@@ -95,23 +95,23 @@
 - name: NoFx
   repo: NoFxAiOS/nofx
   section: agents
-  description: AI trading terminal assistant written in Go for US stocks, commodities, forex and crypto.
+  description: 'Self-hosted AI trading system in Go: Frontier drafts entry plans that you approve order by order, Autopilot runs a configured strategy continuously; routes orders to Binance USDT perpetuals, Hyperliquid, OKX and Bitget.'
   markets:
-  - multi-asset
+  - crypto
   mode: live
   language: Go
   added: '2026-10-28'
-  description_zh: 用 Go 编写的 AI 交易终端助手，覆盖美股、大宗商品、外汇和加密货币。
+  description_zh: 自托管的 Go 语言 AI 交易系统：Frontier 模式生成入场方案由你逐笔批准，Autopilot 模式按配置的策略持续运行；订单路由到 Binance USDT 永续、Hyperliquid、OKX 和 Bitget。
 - name: OpenAlice
   repo: TraderAlice/OpenAlice
   section: agents
-  description: Single-operator AI trading agent that covers research, position entry, ongoing management and exit across equities, crypto, commodities, forex and macro.
+  description: Local workspace that connects the agents you already use to market data, research tools and broker accounts for equities, crypto, commodities, forex and macro; order execution is in beta and starts in simulator or paper mode.
   markets:
   - multi-asset
-  mode: live
+  mode: paper
   language: TypeScript
   added: '2026-10-28'
-  description_zh: 单人操作的 AI 交易智能体，覆盖研究、建仓、持仓管理和退出，支持股票、加密货币、大宗商品、外汇和宏观。
+  description_zh: 把你已经在用的智能体接到行情、研究工具和券商账户的本地工作台，覆盖股票、加密货币、大宗商品、外汇和宏观；下单执行仍在 beta，先从模拟器或 paper 模式开始。
 - name: TradingAgents
   repo: TauricResearch/TradingAgents
   section: agents

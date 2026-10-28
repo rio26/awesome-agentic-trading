@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a listed project that changed
+    url: https://github.com/rio26/awesome-agentic-trading/issues/new?title=Problem%20with%3A%20%3Cname%3E
+    about: Stopped working, turned paid, lost user funds, or had a prompt-injection incident.

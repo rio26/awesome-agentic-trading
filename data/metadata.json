@@ -60,7 +60,7 @@
     "full_name": "HKUDS/Vibe-Trading",
     "license": "MIT",
     "pushed_at": "2026-10-28T03:24:14Z",
-    "stars": 36981
+    "stars": 36984
   },
   "HephaestLab/TraderHarness": {
     "archived": false,
@@ -96,6 +96,13 @@
     "license": "GPL-3.0",
     "pushed_at": "2026-10-28T07:52:00Z",
     "stars": 2180
+  },
+  "LuxAlgo/edge-stats": {
+    "archived": false,
+    "full_name": "LuxAlgo/edge-stats",
+    "license": "MIT",
+    "pushed_at": "2026-09-24T19:59:43Z",
+    "stars": 141
   },
   "LuxAlgo/luxalgo-mcp-server": {
     "archived": false,
@@ -158,7 +165,7 @@
     "full_name": "TauricResearch/TradingAgents",
     "license": "Apache-2.0",
     "pushed_at": "2026-10-27T08:43:04Z",
-    "stars": 117643
+    "stars": 117649
   },
   "TraderAlice/OpenAlice": {
     "archived": false,
@@ -326,7 +333,7 @@
     "full_name": "galleonlabs/hypergrok-trading-desk",
     "license": "MIT",
     "pushed_at": "2026-10-27T11:41:12Z",
-    "stars": 215
+    "stars": 216
   },
   "guangxiangdebizi/FinanceMCP": {
     "archived": false,
@@ -340,7 +347,7 @@
     "full_name": "hsliuping/TradingAgents-CN",
     "license": "NOASSERTION",
     "pushed_at": "2026-09-22T12:11:05Z",
-    "stars": 32668
+    "stars": 32670
   },
   "hyperliquid-dex/hyperliquid-python-sdk": {
     "archived": false,
@@ -417,7 +424,7 @@
     "full_name": "nautechsystems/nautilus_trader",
     "license": "LGPL-3.0",
     "pushed_at": "2026-10-28T11:01:43Z",
-    "stars": 30988
+    "stars": 30989
   },
   "openpitkit/pit": {
     "archived": false,
@@ -466,14 +473,14 @@
     "full_name": "simonlin1212/Vibe-Research",
     "license": "MIT",
     "pushed_at": "2026-10-26T08:08:01Z",
-    "stars": 3336
+    "stars": 3337
   },
   "simonlin1212/a-stock-data": {
     "archived": false,
     "full_name": "simonlin1212/a-stock-data",
     "license": "Apache-2.0",
     "pushed_at": "2026-10-28T01:33:32Z",
-    "stars": 11207
+    "stars": 11209
   },
   "stefanoamorelli/sec-edgar-mcp": {
     "archived": false,
@@ -508,7 +515,7 @@
     "full_name": "wilsonfreitas/awesome-quant",
     "license": null,
     "pushed_at": "2026-10-28T01:03:34Z",
-    "stars": 30326
+    "stars": 30327
   },
   "wquguru/nof0": {
     "archived": false,
