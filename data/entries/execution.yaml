@@ -1,0 +1,89 @@
+# Entries for the `execution` section. Fields are documented in CONTRIBUTING.md.
+
+- name: Alpaca MCP Server
+  repo: alpacahq/alpaca-mcp-server
+  section: execution
+  description: Official Alpaca MCP server for trading stocks, ETFs, crypto and options and pulling account and market data from an MCP client.
+  markets:
+  - equities
+  - options
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: alpaca-py
+  repo: alpacahq/alpaca-py
+  section: execution
+  description: Official Python SDK for the Alpaca trading and market data API; foundational SDK for US stocks, options and crypto.
+  markets:
+  - equities
+  - options
+  - crypto
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: ccxt
+  repo: ccxt/ccxt
+  section: execution
+  description: Unified trading API for more than 100 crypto exchanges and prediction markets in JavaScript, Python, C#, PHP, Go, Java and Rust; foundational SDK.
+  markets:
+  - crypto
+  - prediction-markets
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: CCXT MCP
+  repo: lazy-dinosaur/ccxt-mcp
+  section: execution
+  description: MCP server wrapping ccxt so agents can query balances, order books and place orders on supported crypto exchanges.
+  markets:
+  - crypto
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: Hyperliquid Python SDK
+  repo: hyperliquid-dex/hyperliquid-python-sdk
+  section: execution
+  description: Official Python SDK for the Hyperliquid perpetuals and spot API.
+  markets:
+  - crypto
+  - futures
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: Interactive Brokers MCP
+  repo: code-rabi/interactive-brokers-mcp
+  section: execution
+  description: MCP server that exposes Interactive Brokers account, market data and order tools to agents.
+  markets:
+  - multi-asset
+  mode: live
+  language: JavaScript
+  added: '2026-10-28'
+- name: Lumibot
+  repo: Lumiwealth/lumibot
+  section: execution
+  description: Python trading framework with agent integrations that backtests, paper trades and live trades across twelve brokers for stocks, options, futures, forex and crypto.
+  markets:
+  - multi-asset
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: MetaTrader MCP Server
+  repo: ariadng/metatrader-mcp-server
+  section: execution
+  description: MCP server that lets LLMs read data and place trades through the MetaTrader 5 platform.
+  markets:
+  - forex
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Synpath
+  repo: Synpath-ai/synpath
+  section: execution
+  description: Single Python SDK and API for prediction markets that places and manages orders on Kalshi, Polymarket, Polymarket US and Opinion through one interface.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'

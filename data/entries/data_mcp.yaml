@@ -1,0 +1,83 @@
+# Entries for the `data_mcp` section. Fields are documented in CONTRIBUTING.md.
+
+- name: Alpha Vantage MCP
+  repo: alphavantage/alpha_vantage_mcp
+  section: data_mcp
+  description: Official Alpha Vantage MCP server exposing prices, fundamentals, technical indicators and economic data as tools.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: Financial Datasets MCP
+  repo: financial-datasets/mcp-server
+  section: data_mcp
+  description: MCP server for the Financial Datasets API covering prices, fundamentals, filings and news (last pushed mid-2025).
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: idx
+  repo: fzn0x/idx
+  section: data_mcp
+  description: Indonesian stock market (IDX/IHSG) prices and fundamentals exposed through a web terminal, CLI and an MCP server for agents.
+  markets:
+  - equities
+  mode: library
+  language: Rust
+  added: '2026-10-28'
+- name: LuxAlgo MCP server
+  repo: LuxAlgo/luxalgo-mcp-server
+  section: data_mcp
+  description: Exposes LuxAlgo's indicators and screeners as MCP tools without an API key, so an agent can query technical signals directly.
+  markets:
+  - multi-asset
+  mode: library
+  language: TypeScript
+  added: '2026-10-28'
+- name: Massive (Polygon) MCP
+  repo: massive-com/mcp_massive
+  section: data_mcp
+  description: Official MCP server for Massive.com (formerly Polygon.io) market data covering stocks, options, forex and crypto.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: Maverick MCP
+  repo: wshobson/maverick-mcp
+  section: data_mcp
+  description: Local MCP server for Yahoo Finance data, technical analysis, portfolio tracking and Python backtesting with no API key for core tools.
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: polyledger
+  repo: nahrek/polyledger
+  section: data_mcp
+  description: Resumable Polymarket indexer that collects CLOB market metadata and on-chain Polygon trades into a single DuckDB file for research and backtests.
+  markets:
+  - prediction-markets
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: SEC EDGAR MCP
+  repo: stefanoamorelli/sec-edgar-mcp
+  section: data_mcp
+  description: MCP server for querying SEC EDGAR filings and XBRL financial data.
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: yfinance MCP
+  repo: narumiruna/yfinance-mcp
+  section: data_mcp
+  description: MCP server over yfinance providing quotes, financial statements, analyst data, news, options chains and chart images.
+  markets:
+  - equities
+  mode: library
+  language: Python
+  added: '2026-10-28'

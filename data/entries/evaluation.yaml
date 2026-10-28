@@ -1,0 +1,73 @@
+# Entries for the `evaluation` section. Fields are documented in CONTRIBUTING.md.
+
+- name: backtesting.py
+  repo: kernc/backtesting.py
+  section: evaluation
+  description: Lightweight Python library for backtesting trading strategies on OHLC data with interactive plots.
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Nautilus Trader
+  repo: nautechsystems/nautilus_trader
+  section: evaluation
+  description: Rust-native, event-driven trading engine with deterministic backtesting and the same strategy code for live deployment.
+  markets:
+  - multi-asset
+  mode: research
+  language: Rust
+  added: '2026-10-28'
+- name: NOF0
+  repo: wquguru/nof0
+  section: evaluation
+  description: Open reproduction of the NOF1 Alpha Arena that runs several LLM agents from equal starting capital on live crypto markets and compares their results.
+  markets:
+  - crypto
+  mode: paper
+  language: Go
+  added: '2026-10-28'
+- name: Qlib
+  repo: microsoft/qlib
+  section: evaluation
+  description: AI-oriented quant research platform from Microsoft covering data, model training, backtesting and the RD-Agent automated research loop.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: StockBench
+  repo: ChenYXxxx/stockbench
+  section: evaluation
+  description: Benchmark that evaluates LLMs on multi-step stock trading decisions using post-2024 price, fundamental and news data to avoid training contamination.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: TraderHarness
+  repo: HephaestLab/TraderHarness
+  section: evaluation
+  description: Leakage-resistant backtesting, deterministic replay and training-trajectory generation for LLM trading agents, with A-share support.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: vectorbt
+  repo: polakowo/vectorbt
+  section: evaluation
+  description: Vectorised backtesting and research engine for testing large numbers of trading ideas quickly in Python.
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: What LLM Trading Agents Actually Do in Production
+  repo: ProjectDXAI/continuous-record-llm-trading-agents
+  section: evaluation
+  description: Paper artifacts and aggregate data from a six-month record of thousands of user-funded LLM trading agents on Base, with findings on sizing and profit capture.
+  markets:
+  - crypto
+  mode: research
+  added: '2026-10-28'

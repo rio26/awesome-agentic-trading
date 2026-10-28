@@ -17,12 +17,12 @@ The weekly job marks entries that go quiet; maintainers remove them after a furt
 
 ## How to add an entry
 
-1. Add it to [`data/entries.yaml`](data/entries.yaml). Fields:
+1. Add it to the section's file under [`data/entries/`](data/entries/), for example `data/entries/agents.yaml`. Fields:
 
    ```yaml
    - name: Project Name
      repo: owner/name            # GitHub repos; use `url:` for anything else
-     section: agents             # a key from data/sections.yaml
+     section: agents             # must match the file name; keys are in data/sections.yaml
      description: One factual sentence ending with a full stop. No marketing, no emojis.
      markets: [equities, crypto] # equities, crypto, futures, options, forex, prediction-markets, multi-asset
      mode: paper                 # live, paper, research, library
@@ -30,7 +30,7 @@ The weekly job marks entries that go quiet; maintainers remove them after a furt
      added: 2026-10-28
    ```
 
-2. Run `python scripts/build_readme.py` (needs `pip install -r requirements.txt`) and commit both the YAML and the regenerated `README.md`. CI fails if they disagree.
+2. Run `python scripts/build_readme.py` (needs `pip install -r requirements.txt`) and commit the YAML together with the regenerated `README.md` and `sections/*.md`. CI fails if they disagree. `README.md` shows only the top five per section; the full list is the section page.
 3. One entry per pull request, with a sentence on why it belongs. If you are the author, say so.
 
 ## Style for descriptions

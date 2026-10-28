@@ -9,7 +9,7 @@ The watchlist for LLM trading agents: the agents themselves, the MCP servers tha
 
 ![Agentic trading landscape: data, decision, execution, risk, evaluation](docs/landscape.svg)
 
-**How to read this list.** Sections follow the pipeline in the diagram: what an agent sees, how it decides, how it trades, what stops it, and how you know it works. Every GitHub entry shows live star and last-commit badges, and tags for market (`equities`, `crypto`, `prediction-markets`, ...) and mode (`live`, `paper`, `research`, `library`). Entries with no commits in six months are marked, not deleted; a weekly job keeps that honest.
+**How to read this list.** Sections follow the pipeline in the diagram: what an agent sees, how it decides, how it trades, what stops it, and how you know it works. This page shows the top five of each section by stars; every section has its own page with the full list (the `all N →` links). Every GitHub entry shows live star and last-commit badges, and tags for market (`equities`, `crypto`, `prediction-markets`, ...) and mode (`live`, `paper`, `research`, `library`). Entries with no commits in six months are marked, not deleted; a weekly job keeps that honest.
 
 **What is not here.** General quant libraries, broker APIs without an agent angle, and courses on algorithmic trading: see [Related lists](#related-lists). Closed-source products and paid signal services are out of scope.
 

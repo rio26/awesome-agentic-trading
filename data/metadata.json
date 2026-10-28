@@ -53,14 +53,14 @@
     "full_name": "HKUDS/AI-Trader",
     "license": null,
     "pushed_at": "2026-06-11T09:26:03Z",
-    "stars": 23003
+    "stars": 23005
   },
   "HKUDS/Vibe-Trading": {
     "archived": false,
     "full_name": "HKUDS/Vibe-Trading",
     "license": "MIT",
     "pushed_at": "2026-10-28T03:24:14Z",
-    "stars": 36977
+    "stars": 36981
   },
   "HephaestLab/TraderHarness": {
     "archived": false,
@@ -95,7 +95,7 @@
     "full_name": "Lumiwealth/lumibot",
     "license": "GPL-3.0",
     "pushed_at": "2026-10-28T07:52:00Z",
-    "stars": 2179
+    "stars": 2180
   },
   "LuxAlgo/luxalgo-mcp-server": {
     "archived": false,
@@ -158,7 +158,7 @@
     "full_name": "TauricResearch/TradingAgents",
     "license": "Apache-2.0",
     "pushed_at": "2026-10-27T08:43:04Z",
-    "stars": 117630
+    "stars": 117643
   },
   "TraderAlice/OpenAlice": {
     "archived": false,
@@ -230,6 +230,13 @@
     "pushed_at": "2026-03-28T18:39:29Z",
     "stars": 840
   },
+  "arimanyus/warrenduffer": {
+    "archived": false,
+    "full_name": "arimanyus/warrenduffer",
+    "license": "MIT",
+    "pushed_at": "2026-09-23T05:00:33Z",
+    "stars": 102
+  },
   "bbfamily/abu": {
     "archived": false,
     "full_name": "bbfamily/abu",
@@ -241,7 +248,7 @@
     "archived": false,
     "full_name": "bennyjo/phil",
     "license": "Apache-2.0",
-    "pushed_at": "2026-10-28T11:27:43Z",
+    "pushed_at": "2026-10-28T12:38:22Z",
     "stars": 240
   },
   "botcrypto-io/awesome-crypto-trading-bots": {
@@ -270,7 +277,7 @@
     "full_name": "ccxt/ccxt",
     "license": "MIT",
     "pushed_at": "2026-10-28T11:33:30Z",
-    "stars": 44606
+    "stars": 44607
   },
   "chrisworsey55/atlas-gic": {
     "archived": false,
@@ -319,7 +326,7 @@
     "full_name": "galleonlabs/hypergrok-trading-desk",
     "license": "MIT",
     "pushed_at": "2026-10-27T11:41:12Z",
-    "stars": 214
+    "stars": 215
   },
   "guangxiangdebizi/FinanceMCP": {
     "archived": false,
@@ -333,7 +340,7 @@
     "full_name": "hsliuping/TradingAgents-CN",
     "license": "NOASSERTION",
     "pushed_at": "2026-09-22T12:11:05Z",
-    "stars": 32667
+    "stars": 32668
   },
   "hyperliquid-dex/hyperliquid-python-sdk": {
     "archived": false,
@@ -375,7 +382,7 @@
     "full_name": "microsoft/qlib",
     "license": "MIT",
     "pushed_at": "2026-10-22T06:22:15Z",
-    "stars": 49773
+    "stars": 49774
   },
   "mnemox-ai/tradememory-protocol": {
     "archived": false,
@@ -410,7 +417,7 @@
     "full_name": "nautechsystems/nautilus_trader",
     "license": "LGPL-3.0",
     "pushed_at": "2026-10-28T11:01:43Z",
-    "stars": 30984
+    "stars": 30988
   },
   "openpitkit/pit": {
     "archived": false,
@@ -459,14 +466,14 @@
     "full_name": "simonlin1212/Vibe-Research",
     "license": "MIT",
     "pushed_at": "2026-10-26T08:08:01Z",
-    "stars": 3330
+    "stars": 3336
   },
   "simonlin1212/a-stock-data": {
     "archived": false,
     "full_name": "simonlin1212/a-stock-data",
     "license": "Apache-2.0",
     "pushed_at": "2026-10-28T01:33:32Z",
-    "stars": 11202
+    "stars": 11207
   },
   "stefanoamorelli/sec-edgar-mcp": {
     "archived": false,
@@ -494,14 +501,14 @@
     "full_name": "virattt/ai-hedge-fund",
     "license": "MIT",
     "pushed_at": "2026-10-27T19:40:08Z",
-    "stars": 64310
+    "stars": 64311
   },
   "wilsonfreitas/awesome-quant": {
     "archived": false,
     "full_name": "wilsonfreitas/awesome-quant",
     "license": null,
     "pushed_at": "2026-10-28T01:03:34Z",
-    "stars": 30324
+    "stars": 30326
   },
   "wquguru/nof0": {
     "archived": false,

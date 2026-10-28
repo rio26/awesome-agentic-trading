@@ -1,0 +1,55 @@
+# Entries for the `risk` section. Fields are documented in CONTRIBUTING.md.
+
+- name: Agent Provost
+  repo: CharmingSteve/agent-provost
+  section: risk
+  description: Compliance firewall in front of the Alpaca MCP server that registers and logs every call and trips a kill switch on rule breaches.
+  markets:
+  - equities
+  mode: library
+  language: Lua
+  added: '2026-10-28'
+- name: OpenPit
+  repo: openpitkit/pit
+  section: risk
+  description: Embeddable pre-trade risk engine and SDK that checks every order against size, rate and solvency limits before it reaches a venue.
+  markets:
+  - multi-asset
+  mode: library
+  language: Rust
+  added: '2026-10-28'
+- name: Pre-trade Risk Controls
+  repo: zayansalman/pretrade-risk-controls
+  section: risk
+  description: Venue-independent pre-trade risk controls for automated trading including a kill switch, spend caps and a trailing high-water-mark loss halt.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: RakshaQuant
+  repo: HimanshuMohanty-Git24/RakshaQuant
+  section: risk
+  description: Risk-gated paper trading platform for NSE equities that measures whether an AI layer improves results net of its cost against a deterministic baseline.
+  markets:
+  - equities
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Riskstate Risk Engine
+  repo: Riskstate/risk-engine
+  section: risk
+  description: Pre-trade risk API for BTC and ETH exposure governance across spot, perps and DeFi with a multi-level policy engine.
+  markets:
+  - crypto
+  mode: library
+  added: '2026-10-28'
+- name: TradeMemory Protocol
+  repo: mnemox-ai/tradememory-protocol
+  section: risk
+  description: Local-first decision audit trail and memory for AI trading agents that surfaces an agent's own losing patterns before new trades, with a tamper-evident hash chain and MCP tools.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'

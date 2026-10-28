@@ -1,0 +1,110 @@
+# Entries for the `prediction_markets` section. Fields are documented in CONTRIBUTING.md.
+
+- name: Homerun
+  repo: braedonsaunders/homerun
+  section: prediction_markets
+  description: Prediction market trading platform for Polymarket and Kalshi where strategies and data sources are written in Python, backtested, then paper or live traded.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Kalshi AI Trading Bot
+  repo: ryanfrigo/kalshi-ai-trading-bot
+  section: prediction_markets
+  description: Agent-native toolkit (CLI, MCP server, Claude skill) for Kalshi that measures whether a strategy's edge beats the book before and after trading.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Kalshi Trading Bot CLI
+  repo: OctagonAI/kalshi-trading-bot-cli
+  section: prediction_markets
+  description: CLI that runs LLM fundamental research on Kalshi markets, produces independent probability estimates and computes edge against the live order book.
+  markets:
+  - prediction-markets
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: Oracle3
+  repo: YichengYang-Ethan/oracle3-prediction-market-agent
+  section: prediction_markets
+  description: Trading engine and MCP server for prediction markets that finds fee-adjusted no-arbitrage violations across related event contracts and trades them.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Phil
+  repo: bennyjo/phil
+  section: prediction_markets
+  description: Self-improving agent that trades short-term prediction markets and rewrites its own strategy after every settled bet, paper trading continuously.
+  markets:
+  - prediction-markets
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: PMXT
+  repo: pmxt-dev/pmxt
+  section: prediction_markets
+  description: Unified trading API for prediction markets (Polymarket, Kalshi and others), modelled on ccxt.
+  markets:
+  - prediction-markets
+  mode: library
+  language: TypeScript
+  added: '2026-10-28'
+- name: Polymarket Agent Skills
+  repo: Polymarket/agent-skills
+  section: prediction_markets
+  description: Official Polymarket skill files giving agents the authentication, order, market-data, websocket and CTF knowledge needed to build on the platform.
+  markets:
+  - prediction-markets
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: Polymarket Kalshi Weather Bot
+  repo: suislanchez/polymarket-kalshi-weather-bot
+  section: prediction_markets
+  description: Bot that trades daily temperature markets on Kalshi and Polymarket using GFS ensemble weather forecasts (last pushed March 2026).
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Polymarket MCP Server
+  repo: caiovicentino/polymarket-mcp-server
+  section: prediction_markets
+  description: MCP server exposing Polymarket market data, monitoring and order placement as tools for Claude and other MCP clients.
+  markets:
+  - prediction-markets
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: Polymarket Paper Trader
+  repo: agent-next/polymarket-paper-trader
+  section: prediction_markets
+  description: Paper trading simulator for Polymarket so agents and strategies can be tested without funds.
+  markets:
+  - prediction-markets
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Prediction Market Analysis
+  repo: Jon-Becker/prediction-market-analysis
+  section: prediction_markets
+  description: Framework for collecting and analysing prediction market data, with a large public dataset of Polymarket and Kalshi markets and trades.
+  markets:
+  - prediction-markets
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Prediction Market Backtesting
+  repo: evan-kolberg/prediction-market-backtesting
+  section: prediction_markets
+  description: Nautilus Trader extension for backtesting prediction market strategies on historical order data.
+  markets:
+  - prediction-markets
+  mode: research
+  language: Python
+  added: '2026-10-28'

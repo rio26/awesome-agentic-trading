@@ -1,0 +1,74 @@
+# Entries for the `related_lists` section. Fields are documented in CONTRIBUTING.md.
+
+- name: Awesome Prediction Market Tools
+  repo: aarora4/Awesome-Prediction-Market-Tools
+  section: related_lists
+  description: Curated list of prediction market tools including agents, analytics, APIs, dashboards and copy trading.
+  markets:
+  - prediction-markets
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-crypto-trading-bots
+  repo: botcrypto-io/awesome-crypto-trading-bots
+  section: related_lists
+  description: Curated list of open-source crypto trading bots and related tooling.
+  markets:
+  - crypto
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-finance-mcp
+  repo: BlockRunAI/awesome-finance-mcp
+  section: related_lists
+  description: Curated list of MCP servers for AI finance agents.
+  markets:
+  - multi-asset
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-quant
+  repo: wilsonfreitas/awesome-quant
+  section: related_lists
+  description: Curated list of libraries, packages and resources for quantitative finance.
+  markets:
+  - multi-asset
+  mode: library
+  language: HTML
+  added: '2026-10-28'
+- name: awesome-quant (thuquant)
+  repo: thuquant/awesome-quant
+  section: related_lists
+  description: Index of Chinese quant resources, data sources and tools.
+  markets:
+  - multi-asset
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: awesome-systematic-trading
+  repo: paperswithbacktest/awesome-systematic-trading
+  section: related_lists
+  description: Curated list of libraries, strategies, books and tutorials for systematic trading.
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: awesome-trading-agents
+  repo: LLMQuant/awesome-trading-agents
+  section: related_lists
+  description: Curated list of LLM-driven trading agents, MCP servers and agent skills for research, strategy and execution.
+  markets:
+  - multi-asset
+  mode: library
+  language: Markdown
+  added: '2026-10-28'
+- name: financial-machine-learning
+  repo: firmai/financial-machine-learning
+  section: related_lists
+  description: Curated list of practical financial machine learning tools and applications (last pushed January 2025).
+  markets:
+  - multi-asset
+  mode: library
+  language: Python
+  added: '2026-10-28'

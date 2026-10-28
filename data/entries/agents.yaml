@@ -1,0 +1,132 @@
+# Entries for the `agents` section. Fields are documented in CONTRIBUTING.md.
+
+- name: AI Hedge Fund
+  repo: virattt/ai-hedge-fund
+  section: agents
+  description: Team of LLM agents modelled on well-known investors that debate and produce portfolio decisions for US equities, with a backtester and web UI.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  featured: true
+  added: '2026-10-28'
+- name: Astra Quant Agent
+  repo: 0xethanq/astra-quant-agent
+  section: agents
+  description: Autonomous crypto trading system that combines multi-LLM market analysis with deterministic Python risk control and OKX order execution.
+  markets:
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: ATLAS
+  repo: chrisworsey55/atlas-gic
+  section: agents
+  description: Framework of debating LLM trading agents whose prompts are rewritten from scored market outcomes, in the style of autoresearch loops.
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: CloddsBot
+  repo: alsk1992/CloddsBot
+  section: agents
+  description: Autonomous AI trading agent that scans and trades across Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs and several EVM chains from one runtime.
+  markets:
+  - multi-asset
+  - prediction-markets
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: FinGPT
+  repo: AI4Finance-Foundation/FinGPT
+  section: agents
+  description: Open financial LLMs and fine-tuning recipes from AI4Finance for sentiment, forecasting and retrieval tasks used by trading agents.
+  markets:
+  - equities
+  mode: research
+  language: Jupyter Notebook
+  added: '2026-10-28'
+- name: FinRobot
+  repo: AI4Finance-Foundation/FinRobot
+  section: agents
+  description: Agent platform from AI4Finance that chains LLM-based analyst, forecaster and strategy agents for financial analysis and trading research.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: HyperGrok Trading Desk
+  repo: galleonlabs/hypergrok-trading-desk
+  section: agents
+  description: Role-based Hyperliquid trading desk for AI agents with seven roles, seventeen skills and keyless market tools; execution requires an approved ticket and the user's API wallet.
+  markets:
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: LLM_trader
+  repo: qrak/LLM_trader
+  section: agents
+  description: BTC/USDC LLM trading agent with chart vision, a vector memory of its own closed trades, deterministic risk gates and a public dashboard; paper trading by default.
+  markets:
+  - crypto
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Moss Trade Bot Skills
+  repo: moss-site/moss-trade-bot-skills
+  section: agents
+  description: Agent skills that turn a natural-language description of a trading style into a crypto strategy across trend, mean-reversion, momentum, volume and risk pillars, then backtest and run it.
+  markets:
+  - crypto
+  mode: live
+  language: Python
+  added: '2026-10-28'
+- name: NoFx
+  repo: NoFxAiOS/nofx
+  section: agents
+  description: AI trading terminal assistant written in Go for US stocks, commodities, forex and crypto.
+  markets:
+  - multi-asset
+  mode: live
+  language: Go
+  added: '2026-10-28'
+- name: OpenAlice
+  repo: TraderAlice/OpenAlice
+  section: agents
+  description: Single-operator AI trading agent that covers research, position entry, ongoing management and exit across equities, crypto, commodities, forex and macro.
+  markets:
+  - multi-asset
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'
+- name: TradingAgents
+  repo: TauricResearch/TradingAgents
+  section: agents
+  description: Multi-agent LLM framework that mirrors a trading firm (analysts, researchers, trader, risk manager) and produces trade decisions for US equities.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  featured: true
+  added: '2026-10-28'
+- name: Vibe-Trading
+  repo: HKUDS/Vibe-Trading
+  section: agents
+  description: Personal trading agent with a FastAPI backend and React frontend that gives a coding agent market data, analysis and trading capabilities through one install.
+  markets:
+  - multi-asset
+  mode: paper
+  language: Python
+  featured: true
+  added: '2026-10-28'
+- name: Warren Duffer
+  repo: arimanyus/warrenduffer
+  section: agents
+  description: Intraday bot for Indian equities in which an LLM ranks the Nifty 50 every 15 seconds while deterministic code sizes positions, sets stops and halts on a daily loss limit; places live orders through Zerodha Kite or Kotak Neo with no paper mode.
+  markets:
+  - equities
+  mode: live
+  language: TypeScript
+  added: '2026-10-28'

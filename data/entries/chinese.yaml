@@ -1,0 +1,85 @@
+# Entries for the `chinese` section. Fields are documented in CONTRIBUTING.md.
+
+- name: a-stock-data
+  repo: simonlin1212/a-stock-data
+  section: chinese
+  description: A-share data toolkit for AI agents covering K-lines, ticks, reports, flows, news, financials, ETF and options, convertible bonds and futures across dozens of sources.
+  markets:
+  - equities
+  - futures
+  - options
+  mode: library
+  language: Python
+  added: '2026-10-28'
+- name: A_Share_investment_Agent
+  repo: 24mlight/A_Share_investment_Agent
+  section: chinese
+  description: Multi-agent LLM investment system for A-shares where bull and bear researchers and analysts debate before a decision; educational proof of concept.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: abu
+  repo: bbfamily/abu
+  section: chinese
+  description: Long-running Chinese open-source quant framework for stocks, options, futures and bitcoin with machine-learning strategy tooling (pre-LLM, foundational).
+  markets:
+  - multi-asset
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: easy-stock
+  repo: jundizhou/easy-stock
+  section: chinese
+  description: A 股行情分析与 AI 投研智能体桌面工作台，覆盖个股分析、量化分析和盘后复盘。Desktop workbench with an AI research agent for mainland A-share analysis, quant screening and post-close review.
+  markets:
+  - equities
+  mode: research
+  language: Go
+  added: '2026-10-28'
+- name: FinanceMCP
+  repo: guangxiangdebizi/FinanceMCP
+  section: chinese
+  description: MCP server over Tushare and Binance giving LLMs Chinese stock, fund, bond, macro and crypto data plus financial news.
+  markets:
+  - multi-asset
+  mode: library
+  language: TypeScript
+  added: '2026-10-28'
+- name: PanWatch
+  repo: TNT-Likely/PanWatch
+  section: chinese
+  description: Stock monitoring service for A-shares, HK and US markets built on TradingAgents, with portfolio insights, alerts and scheduled reports.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: TradingAgents-CN
+  repo: hsliuping/TradingAgents-CN
+  section: chinese
+  description: Chinese-enhanced fork of TradingAgents with A-share and HK data sources, Chinese LLM backends and a web UI.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'
+- name: Vibe-Research
+  repo: simonlin1212/Vibe-Research
+  section: chinese
+  description: Research workbench for A-shares, US and HK stocks with watchlists, daily reviews, industry research, backtests and a report library, driven by Claude Code, Codex or any model API.
+  markets:
+  - equities
+  mode: research
+  language: TypeScript
+  added: '2026-10-28'
+- name: WyckoffTradingAgent
+  repo: YoungCan-Wang/WyckoffTradingAgent
+  section: chinese
+  description: Wyckoff volume-price analysis agent and AI stock screener for A-shares with CLI workflows and MCP tools.
+  markets:
+  - equities
+  mode: research
+  language: Python
+  added: '2026-10-28'

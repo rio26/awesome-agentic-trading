@@ -16,8 +16,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-ENTRIES_FILE = DATA_DIR / "entries.yaml"
+ENTRIES_DIR = DATA_DIR / "entries"          # one YAML file per section: data/entries/<section>.yaml
 SECTIONS_FILE = DATA_DIR / "sections.yaml"
+SECTIONS_OUT = ROOT / "sections"            # generated per-section pages
 METADATA_FILE = DATA_DIR / "metadata.json"
 
 MARKETS = {"equities", "crypto", "futures", "options", "forex", "prediction-markets", "multi-asset"}
@@ -47,9 +48,18 @@ def load_sections() -> list[dict]:
 
 
 def load_entries() -> list[dict]:
-    entries = load_yaml(ENTRIES_FILE) or []
-    if not isinstance(entries, list):
-        raise DataError(f"{ENTRIES_FILE}: expected a list")
+    """Read every data/entries/<section>.yaml; each entry's `section` must match its file."""
+    entries: list[dict] = []
+    for path in sorted(ENTRIES_DIR.glob("*.yaml")):
+        items = load_yaml(path) or []
+        if not isinstance(items, list):
+            raise DataError(f"{path}: expected a list")
+        for e in items:
+            if isinstance(e, dict) and e.get("section") not in (None, path.stem):
+                raise DataError(f"{path}: entry {e.get('name')!r} says section `{e['section']}`, file is `{path.stem}`")
+            if isinstance(e, dict):
+                e.setdefault("section", path.stem)
+        entries.extend(items)
     return entries
 
 

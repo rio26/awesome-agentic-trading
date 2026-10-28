@@ -1,4 +1,4 @@
-"""Tests for the data validation, README rendering, and scout ranking."""
+"""Tests for the data validation, README/section rendering, and scout ranking."""
 from __future__ import annotations
 
 import sys
@@ -13,7 +13,7 @@ import common  # noqa: E402
 import scout  # noqa: E402
 
 SECTIONS = [{"key": "agents", "title": "Trading agents & frameworks", "intro": "Intro."},
-            {"key": "papers", "title": "Papers", "intro": ""}]
+            {"key": "incidents", "title": "Incidents", "intro": "", "sort": "year"}]
 
 
 def entry(**over):
@@ -21,6 +21,10 @@ def entry(**over):
             "description": "Does a thing.", "markets": ["crypto"], "mode": "paper"}
     base.update(over)
     return base
+
+
+def incident(name, year, n):
+    return entry(name=name, repo=None, url=f"https://a.example/{n}", section="incidents", year=year, markets=[], mode=None)
 
 
 # -- validation --------------------------------------------------------------- #
@@ -52,6 +56,27 @@ def test_duplicate_targets_are_reported():
     assert any("duplicate" in p for p in problems)
 
 
+def test_entries_must_live_in_the_file_named_after_their_section(tmp_path, monkeypatch):
+    d = tmp_path / "entries"
+    d.mkdir()
+    (d / "agents.yaml").write_text("- name: A\n  repo: a/a\n  section: risk\n  description: X.\n")
+    monkeypatch.setattr(common, "ENTRIES_DIR", d)
+    try:
+        common.load_entries()
+    except common.DataError as err:
+        assert "file is `agents`" in str(err)
+    else:
+        raise AssertionError("expected DataError")
+
+
+def test_section_defaults_to_file_name(tmp_path, monkeypatch):
+    d = tmp_path / "entries"
+    d.mkdir()
+    (d / "agents.yaml").write_text("- name: A\n  repo: a/a\n  description: X.\n")
+    monkeypatch.setattr(common, "ENTRIES_DIR", d)
+    assert common.load_entries()[0]["section"] == "agents"
+
+
 # -- rendering ---------------------------------------------------------------- #
 
 def test_render_entry_has_link_tags_and_badges():
@@ -68,19 +93,12 @@ def test_render_entry_marks_stale_and_archived():
 
 
 def test_render_entry_without_repo_has_no_badges_but_shows_year():
-    line = build_readme.render_entry(entry(repo=None, url="https://arxiv.org/abs/1", year=2024, markets=[], mode=None), {})
+    line = build_readme.render_entry(incident("Paper", 2024, 1), {})
     assert "(2024)" in line and "shields.io" not in line
 
 
-def test_render_orders_sections_and_sorts_entries(monkeypatch):
-    monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
-    entries = [entry(name="zeta"), entry(name="Alpha", repo="octo/alpha"),
-               entry(name="Paper", repo=None, url="https://arxiv.org/abs/2", section="papers", markets=[], mode=None)]
-    out = build_readme.render(entries, SECTIONS, {})
-    assert out.index("## Trading agents & frameworks") < out.index("## Papers")
-    assert out.index("[Alpha]") < out.index("[zeta]")
-    assert "- [Trading agents & frameworks](#trading-agents--frameworks) (2)" in out
-    assert "<!-- entries: 3 -->" in out
+def test_unknown_language_is_not_rendered_as_a_tag():
+    assert "`none`" not in build_readme.render_entry(entry(language="none"), {})
 
 
 def test_github_anchor_matches_github_rules():
@@ -89,13 +107,49 @@ def test_github_anchor_matches_github_rules():
     assert build_readme.github_anchor("Papers") == "papers"
 
 
+def test_full_pages_sort_by_stars_then_name_and_year_sections_newest_first():
+    meta = {"octo/big": {"stars": 500}, "octo/small": {"stars": 5}}
+    items = [entry(name="zeta", repo="octo/small"), entry(name="Alpha", repo="octo/big"), entry(name="Mid", repo="octo/none")]
+    assert [e["name"] for e in build_readme.ordered(items, SECTIONS[0], meta)] == ["Alpha", "zeta", "Mid"]
+    inc = [incident("Old", 2012, 1), incident("New", 2026, 2)]
+    assert [e["name"] for e in build_readme.ordered(inc, SECTIONS[1], {})] == ["New", "Old"]
+
+
+def test_readme_is_a_digest_with_links_to_full_pages(monkeypatch):
+    monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
+    entries = [entry(name=f"Agent {i}", repo=f"octo/a{i}") for i in range(8)]
+    out = build_readme.render_readme(entries, SECTIONS, {})
+    assert out.count("[Agent ") == build_readme.DIGEST_PER_SECTION
+    assert "[All 8 trading agents & frameworks entries →](sections/agents.md)" in out
+    assert "- [Trading agents & frameworks](#trading-agents--frameworks) · [all 8 →](sections/agents.md)" in out
+    assert "<!-- entries: 8 -->" in out
+
+
+def test_readme_omits_the_all_link_when_the_section_fits(monkeypatch):
+    monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
+    out = build_readme.render_readme([entry()], SECTIONS, {})
+    assert "entries →" not in out
+
+
 def test_featured_entries_make_a_start_here_section(monkeypatch):
     monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
-    out = build_readme.render([entry(featured=True)], SECTIONS, {})
+    out = build_readme.render_readme([entry(featured=True)], SECTIONS, {})
     assert "## Start here" in out and out.count("[Demo](") == 2
 
 
-def test_shipped_data_validates_and_readme_is_current():
+def test_section_pages_have_navigation_and_every_entry(monkeypatch):
+    monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
+    entries = [entry(name=f"Agent {i}", repo=f"octo/a{i}") for i in range(8)] + [incident("Boom", 2026, 1)]
+    files = build_readme.render_all(entries, SECTIONS, {})
+    agents = files[build_readme.SECTIONS_OUT / "agents.md"]
+    incidents = files[build_readme.SECTIONS_OUT / "incidents.md"]
+    assert agents.count("[Agent ") == 8
+    assert "[← README](../README.md)" in agents and "[Incidents →](incidents.md)" in agents
+    assert "[← Trading agents & frameworks](agents.md)" in incidents and "→](" not in incidents.split("\n")[3]
+    assert "8 entries, by stars" in agents and "1 entries, newest first" in incidents
+
+
+def test_shipped_data_validates_and_generated_files_are_current():
     sections = common.load_sections()
     entries = common.load_entries()
     assert common.validate(entries, sections) == []
@@ -107,9 +161,9 @@ def test_shipped_data_validates_and_readme_is_current():
 def test_scout_rank_excludes_listed_and_patterns_and_sorts_by_velocity():
     now = datetime.now(timezone.utc)
     def item(name, stars, days):
-        return {"full_name": name, "name": name.split("/")[1], "stargazers_count": stars,
-                "created_at": (now - timedelta(days=days)).isoformat(), "language": "Python",
-                "description": "x | y", "_pass": "new"}
+        return {"full_name": name, "name": name.split("/")[1], "stargazers_count": stars, "forks_count": 3,
+                "license": {"spdx_id": "MIT"}, "created_at": (now - timedelta(days=days)).isoformat(),
+                "language": "Python", "description": "x | y", "_pass": "new"}
     found = {"a/fast": item("a/fast", 100, 2), "a/slow": item("a/slow", 100, 50),
              "a/listed": item("a/listed", 999, 1), "a/tutorial-bot": item("a/tutorial-bot", 500, 1)}
     rows = scout.rank(found, {"a/listed"}, scout.DEFAULT_EXCLUDE)
@@ -117,14 +171,10 @@ def test_scout_rank_excludes_listed_and_patterns_and_sorts_by_velocity():
     assert rows[0]["description"] == "x / y"  # pipes escaped for the Markdown table
 
 
-def test_year_sorted_sections_are_newest_first(monkeypatch):
-    monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
-    sections = [{"key": "incidents", "title": "Incidents", "sort": "year"}]
-    entries = [entry(name="Old", repo=None, url="https://a.example/1", section="incidents", year=2012, markets=[], mode=None),
-               entry(name="New", repo=None, url="https://a.example/2", section="incidents", year=2026, markets=[], mode=None)]
-    out = build_readme.render(entries, sections, {})
-    assert out.index("[New]") < out.index("[Old]")
-
-
-def test_unknown_language_is_not_rendered_as_a_tag():
-    assert "`none`" not in build_readme.render_entry(entry(language="none"), {})
+def test_scout_flags_mark_the_common_junk_patterns():
+    base = {"full_name": "a/b", "name": "b", "stargazers_count": 150, "forks_count": 0,
+            "license": None, "description": "Great bot, contact me on Telegram t.me/x"}
+    assert scout.flags(base, 3) == ["no-license", "0-forks", "fast-stars", "contact-funnel"]
+    clean = {"full_name": "a/c", "name": "c", "stargazers_count": 150, "forks_count": 20,
+             "license": {"spdx_id": "MIT"}, "description": "Does a thing."}
+    assert scout.flags(clean, 30) == []

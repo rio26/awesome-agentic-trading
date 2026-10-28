@@ -9,7 +9,7 @@ Two passes:
   * rising: created in the last 90 days with at least 5x --min-stars stars
 
 Candidates are ranked by stars per day since creation. Repositories already in
-data/entries.yaml, and names matching --exclude patterns, are skipped. The output
+data/entries/, and names matching --exclude patterns, are skipped. The output
 is a report for a human; nothing is added to the list automatically.
 """
 from __future__ import annotations
@@ -69,6 +69,22 @@ def collect(days: int, min_stars: int) -> dict[str, dict]:
     return found
 
 
+def flags(item: dict, age_days: int) -> list[str]:
+    """Cheap warning signs seen on star-farmed or promotional repos. A flag is a reason to look, not a verdict."""
+    out = []
+    if not (item.get("license") or {}).get("spdx_id"):
+        out.append("no-license")
+    stars = item.get("stargazers_count", 0)
+    if stars >= 50 and item.get("forks_count", 0) == 0:
+        out.append("0-forks")
+    if age_days <= 7 and stars / age_days > 30:
+        out.append("fast-stars")
+    desc = (item.get("description") or "").lower()
+    if any(w in desc for w in ("telegram", "t.me/", "whatsapp", "wechat", "contact me")):
+        out.append("contact-funnel")
+    return out
+
+
 def rank(found: dict[str, dict], listed: set[str], exclude: list[str]) -> list[dict]:
     now = datetime.now(timezone.utc)
     patterns = [re.compile(p, re.I) for p in exclude]
@@ -84,6 +100,9 @@ def rank(found: dict[str, dict], listed: set[str], exclude: list[str]) -> list[d
             "age_days": age,
             "velocity": item["stargazers_count"] / age,
             "language": item.get("language") or "-",
+            "license": (item.get("license") or {}).get("spdx_id") or "none",
+            "forks": item.get("forks_count", 0),
+            "flags": " ".join(flags(item, age)),
             "description": (item.get("description") or "").strip().replace("|", "/")[:120],
             "pass": item["_pass"],
         })
@@ -95,13 +114,16 @@ def report(rows: list[dict], days: int) -> str:
     lines = [f"## Scout report {today} (last {days} days, plus 90-day risers)", ""]
     if not rows:
         return "\n".join(lines + ["No new candidates.", ""])
-    lines += ["| repo | stars | age | stars/day | lang | description |", "|---|---:|---:|---:|---|---|"]
+    lines += ["| repo | stars | forks | age | stars/day | lang | license | flags | description |",
+              "|---|---:|---:|---:|---:|---|---|---|---|"]
     for r in rows[:40]:
         lines.append(
-            f"| [{r['repo']}](https://github.com/{r['repo']}) | {r['stars']} | {r['age_days']}d | "
-            f"{r['velocity']:.1f} | {r['language']} | {r['description']} |"
+            f"| [{r['repo']}](https://github.com/{r['repo']}) | {r['stars']} | {r['forks']} | {r['age_days']}d | "
+            f"{r['velocity']:.1f} | {r['language']} | {r['license']} | {r['flags']} | {r['description']} |"
         )
-    lines += ["", f"{len(rows)} candidates in total; top 40 shown. Add the good ones to `data/entries.yaml`.", ""]
+    lines += ["", "Flags: `no-license`, `0-forks` (50+ stars, none), `fast-stars` (>30/day in the first week), "
+              "`contact-funnel` (Telegram/WeChat/WhatsApp in the description). A flag means look closer, not reject."]
+    lines += ["", f"{len(rows)} candidates in total; top 40 shown. Add the good ones to the matching file under `data/entries/`.", ""]
     return "\n".join(lines)
 
 

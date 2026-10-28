@@ -1,0 +1,38 @@
+# Entries for the `incidents` section. Fields are documented in CONTRIBUTING.md.
+
+- name: 2010 Flash Crash joint SEC-CFTC report
+  url: https://www.sec.gov/files/marketevents-report.pdf
+  section: incidents
+  description: 2010-05-06. Official staff report attributes the crash to a single $4.1 billion automated sell algorithm executing 75,000 E-mini contracts at a fixed share of volume regardless of price or time, amplified by HFT liquidity withdrawal and inconsistent exchange rules.
+  year: 2010
+  added: '2026-10-28'
+- name: AIXBT agent wallet drained via queued prompts
+  url: https://incidentdatabase.ai/cite/1003
+  section: incidents
+  description: 2025-03-18. An attacker accessed the dashboard of the autonomous crypto agent AIXBT and queued two prompts instructing it to transfer 55.5 ETH (about $106,000) from its wallet; the maintainer said the model itself was not manipulated, showing that an agent's control plane is part of its attack surface.
+  year: 2025
+  added: '2026-10-28'
+- name: Alpha Arena Season 1 - four of six LLMs lose money
+  url: https://forklog.com/en/four-out-of-six-ai-models-suffer-losses-in-trading-tournament/
+  section: incidents
+  description: 2025-11-03. In nof1.ai's live $10,000-per-model crypto contest, Qwen3 Max ($12,231) and DeepSeek ($10,489) finished up while Claude Sonnet 4.5 ($5,799), Gemini 2.5 Pro ($5,445), Grok 4 ($4,208) and GPT-5 ($4,126) lost 42-59%; lesson is that an unconstrained LLM given capital and a prompt overtrades and shows persistent biases.
+  year: 2025
+  added: '2026-10-28'
+- name: Grok/Bankr wallet drained by Morse-code prompt injection
+  url: https://giskard.ai/knowledge/how-grok-got-prompt-injected-an-x-user-drained-150-000-from-an-ai-wallet
+  section: incidents
+  description: 2026-05-04. An X user sent a membership NFT that unlocked transfer rights on a Bankr-provisioned wallet for Grok, then posted a Morse-encoded message that Grok decoded publicly and Bankrbot executed as a transfer of 3 billion DRB tokens (~$150-200k); most funds were later returned, but the case shows decoded text must never be treated as a command.
+  year: 2026
+  added: '2026-10-28'
+- name: Knight Capital erroneous-order loss
+  url: https://www.sec.gov/news/press-release/2013-222
+  section: incidents
+  description: 2012-08-01. Old code left in an order router plus a faulty deployment sent more than 4 million orders in 45 minutes against 212 intended customer orders, costing over $460 million; the SEC later fined Knight $12 million under the Market Access Rule and noted 97 pre-open alert emails were ignored.
+  year: 2012
+  added: '2026-10-28'
+- name: Lobstar Wilde bot sends $440k of tokens instead of 4 SOL
+  url: https://www.theblock.co/post/390722/ai-agent-created-by-openai-dev-accidentally-sends-entire-memecoin-holdings-to-reply-guy
+  section: incidents
+  description: 2026-02-22. An autonomous Solana trading agent built by OpenAI engineer Nik Pash replied to a user's request for 4 SOL by transferring about 52.4 million LOBSTAR tokens (5% of supply, later valued at ~$440,000), apparently from a unit/decimal misread of an API response; irreversible on-chain transfers need hard spend limits.
+  year: 2026
+  added: '2026-10-28'

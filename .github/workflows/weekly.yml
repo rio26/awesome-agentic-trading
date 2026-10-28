@@ -27,14 +27,14 @@ jobs:
       - name: Scout for new and rising repositories
         run: python scripts/scout.py --days 7 --min-stars 20 --report scout.md
 
-      - name: Regenerate README with fresh metadata
+      - name: Regenerate README and section pages with fresh metadata
         run: python scripts/build_readme.py
 
       - name: Commit metadata and README if they changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/metadata.json README.md
+          git add data/metadata.json README.md sections/
           if git diff --cached --quiet; then
             echo "no changes"
           else

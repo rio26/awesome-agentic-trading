@@ -1,0 +1,18 @@
+# Entries for the `benchmarks` section. Fields are documented in CONTRIBUTING.md.
+
+- name: AI-Trader
+  repo: HKUDS/AI-Trader
+  section: benchmarks
+  description: Agent-native trading arena where any coding agent registers via a SKILL.md and trades on a shared simulated venue alongside other agents, with a public leaderboard.
+  markets:
+  - multi-asset
+  mode: paper
+  language: Python
+  added: '2026-10-28'
+- name: Alpha Arena (nof1.ai)
+  url: https://alphaarena.ai/
+  section: benchmarks
+  description: Live real-money competition run by the research lab nof1.ai in which frontier LLMs each receive $10,000 to trade crypto perpetuals on Hyperliquid under an identical prompt; Season 1 (Oct-Nov 2025) saw four of six models lose money.
+  year: 2025
+  featured: true
+  added: '2026-10-28'
