@@ -1,5 +1,7 @@
 # Weekly report {{date}}
 
+English · [简体中文]({{date}}.zh-CN.md)
+
 > **Personal analysis, not investment advice.** The "Opportunities" section lists technical directions and open questions that look interesting to the maintainer. Nothing here is a recommendation to trade, buy, build, or invest in anything.
 
 ## This week in numbers

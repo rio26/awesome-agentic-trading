@@ -11,7 +11,7 @@
 
 ![智能体交易流水线：数据、决策、执行、风控、评测](docs/landscape.zh-CN.svg)
 
-每个板块只列按 star 排的前五条，`全部 N 条 →` 打开完整页面。半年没动静的条目会被标注而不是删除。[每周周报](reports/README.md) · [收录标准](CONTRIBUTING.md) · 不构成投资建议。
+每个板块只列按 star 排的前五条，`全部 N 条 →` 打开完整页面。半年没动静的条目会被标注而不是删除。[每周周报](reports/README.zh-CN.md) · [收录标准](CONTRIBUTING.md) · 不构成投资建议。
 
 ## 目录
 

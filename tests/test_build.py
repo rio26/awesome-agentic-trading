@@ -221,24 +221,30 @@ def test_shipped_reviewed_file_is_valid():
     assert all("reason" in r for r in items)
 
 
-def test_new_report_fills_data_sections_and_refuses_to_overwrite(tmp_path, monkeypatch):
+def test_new_report_writes_both_languages_and_refuses_to_overwrite(tmp_path, monkeypatch):
     import new_report
     reports = tmp_path / "reports"
     reports.mkdir()
-    (reports / "_template.md").write_text((ROOT / "reports" / "_template.md").read_text())
+    for name in ("_template.md", "_template.zh-CN.md"):
+        (reports / name).write_text((ROOT / "reports" / name).read_text(encoding="utf-8"), encoding="utf-8")
     (reports / "2026-10-28.md").write_text("old")
     monkeypatch.setattr(new_report, "REPORTS", reports)
-    monkeypatch.setattr(new_report, "TEMPLATE", reports / "_template.md")
     monkeypatch.setattr(new_report, "ROOT", tmp_path)
     assert new_report.main(["--date", "2026-11-04"]) == 0
-    text = (reports / "2026-11-04.md").read_text()
-    assert "# Weekly report 2026-11-04" in text and "Previous: [2026-10-28](2026-10-28.md)" in text
-    assert "not investment advice" in text and "{{" not in text
+    en = (reports / "2026-11-04.md").read_text(encoding="utf-8")
+    zh = (reports / "2026-11-04.zh-CN.md").read_text(encoding="utf-8")
+    assert "# Weekly report 2026-11-04" in en and "Previous: [2026-10-28](2026-10-28.md)" in en
+    assert "# 周报 2026-11-04" in zh and "上一期：[2026-10-28](2026-10-28.zh-CN.md)" in zh
+    assert "[简体中文](2026-11-04.zh-CN.md)" in en and "[English](2026-11-04.md)" in zh
+    assert "not investment advice" in en and "不构成投资建议" in zh
+    assert "{{" not in en and "{{" not in zh
     assert new_report.main(["--date", "2026-11-04"]) == 1  # refuses to overwrite
 
 
-def test_first_report_exists_and_carries_the_disclaimer():
-    text = (ROOT / "reports" / "2026-10-28.md").read_text()
-    assert "not investment advice" in text.lower()
-    assert "## Opportunities and open questions" in text
-    assert "2026-10-28.md" in (ROOT / "reports" / "README.md").read_text()
+def test_first_report_exists_in_both_languages_with_the_disclaimer():
+    en = (ROOT / "reports" / "2026-10-28.md").read_text(encoding="utf-8")
+    zh = (ROOT / "reports" / "2026-10-28.zh-CN.md").read_text(encoding="utf-8")
+    assert "not investment advice" in en.lower() and "## Opportunities and open questions" in en
+    assert "不构成投资建议" in zh and "## 机会与开放问题" in zh
+    assert "2026-10-28.md" in (ROOT / "reports" / "README.md").read_text(encoding="utf-8")
+    assert "2026-10-28.zh-CN.md" in (ROOT / "reports" / "README.zh-CN.md").read_text(encoding="utf-8")
