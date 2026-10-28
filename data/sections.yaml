@@ -4,35 +4,57 @@
 - key: agents
   title: Trading agents & frameworks
   intro: Open-source systems where an LLM (or a team of them) reads the market and decides what to trade. Most are research-grade; the `mode` tag says whether a project trades live, paper-trades, or is a study harness.
+  title_zh: 交易智能体与框架
+  intro_zh: 由 LLM（或一组 LLM）读取市场并决定交易什么的开源系统。多数是研究级，`mode` 标签说明项目是实盘、模拟交易还是研究用途。
 - key: prediction_markets
   title: Prediction-market agents
   intro: Agents and tooling for Polymarket, Kalshi and similar venues. Binary contracts, thin books and event resolution make this the most active corner of agentic trading right now.
+  title_zh: 预测市场智能体
+  intro_zh: 面向 Polymarket、Kalshi 等平台的智能体和工具。二元合约、薄订单簿和事件结算让这里成为当下智能体交易最活跃的角落。
 - key: data_mcp
   title: Market data & research tools
   intro: MCP servers and agent tools that feed prices, fundamentals, filings and news into an agent. The decision layer is only as good as what it can see.
+  title_zh: 行情数据与研究工具
+  intro_zh: 把价格、基本面、申报文件和新闻喂给智能体的 MCP 服务器和工具。决策层的上限取决于它能看到什么。
 - key: execution
   title: 'Execution: broker & exchange access'
   intro: 'How an agent actually places orders: MCP servers and SDKs for brokers and exchanges. Anything here can move real money; read the risk section before wiring one up.'
+  title_zh: 执行：券商与交易所接入
+  intro_zh: 智能体真正下单的通道：券商和交易所的 MCP 服务器与 SDK。这里的任何东西都能动真钱，接线前先读风控板块。
 - key: risk
   title: Risk & guardrails
   intro: Position limits, kill switches, pre-trade checks and prompt-injection defences for autonomous agents. Sparse today, which is itself a finding.
+  title_zh: 风控与护栏
+  intro_zh: 面向自主智能体的仓位限制、kill switch、交易前检查和提示词注入防御。目前很稀疏，这本身就是一个发现。
 - key: evaluation
   title: Backtesting & evaluation
   intro: Engines and harnesses for testing a strategy before it touches money. For LLM agents the extra hazard is look-ahead bias through the model's training data.
+  title_zh: 回测与评测
+  intro_zh: 在策略碰到真钱之前测试它的引擎和工具。对 LLM 智能体来说，额外的风险是模型训练数据带来的前视偏差。
 - key: benchmarks
   title: Benchmarks & leaderboards
   intro: Live arenas and leaderboards where LLM agents trade against each other or the market in public.
+  title_zh: 基准与排行榜
+  intro_zh: LLM 智能体相互之间或与市场公开对垒的实盘竞技场和排行榜。
 - key: incidents
   sort: year
   title: Incidents & postmortems
   intro: What it looks like when automated trading goes wrong, from classic algorithmic failures to LLM agents losing money in public. Every entry has a primary source.
+  title_zh: 事故与复盘
+  intro_zh: 自动化交易出问题时的样子，从经典的算法失控到 LLM 智能体公开亏钱。每条都有一手来源。
 - key: regulation
   sort: year
   title: Regulation & compliance
   intro: Rules that already apply to algorithmic trading, and therefore to agents, in the main jurisdictions. Not legal advice.
+  title_zh: 监管与合规
+  intro_zh: 主要司法辖区已经适用于算法交易、因而也适用于智能体的规则。不构成法律意见。
 - key: chinese
-  title: 中文资源 · Chinese-language & A-share tools
-  intro: 面向 A 股、港股的 agent 工具和中文资料。Tools and writing for mainland and Hong Kong markets, where data access and trading hours differ from US venues.
+  title: Chinese & A-share tools
+  intro: Agent tools and writing for mainland and Hong Kong markets, where data access and trading hours differ from US venues.
+  title_zh: 中文资源 · A 股工具
+  intro_zh: 面向 A 股、港股的智能体工具和中文资料。内地和香港市场的数据获取方式与交易时段都和美国市场不同。
 - key: related_lists
   title: Related lists
   intro: Broader lists this one deliberately does not duplicate.
+  title_zh: 相关列表
+  intro_zh: 本列表刻意不去重复的更宽泛的列表。

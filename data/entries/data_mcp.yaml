@@ -9,6 +9,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: Alpha Vantage 官方 MCP 服务器，把行情、基本面、技术指标和经济数据暴露为工具。
 - name: Financial Datasets MCP
   repo: financial-datasets/mcp-server
   section: data_mcp
@@ -18,6 +19,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: Financial Datasets API 的 MCP 服务器，覆盖行情、基本面、申报文件和新闻（最后提交于 2025 年中）。
 - name: idx
   repo: fzn0x/idx
   section: data_mcp
@@ -27,6 +29,7 @@
   mode: library
   language: Rust
   added: '2026-10-28'
+  description_zh: 印尼股市（IDX/IHSG）行情和基本面，通过 Web 终端、命令行和 MCP 服务器提供给智能体。
 - name: LuxAlgo MCP server
   repo: LuxAlgo/luxalgo-mcp-server
   section: data_mcp
@@ -36,6 +39,7 @@
   mode: library
   language: TypeScript
   added: '2026-10-28'
+  description_zh: 把 LuxAlgo 的指标和筛选器作为 MCP 工具开放，无需 API key，智能体可直接查询技术信号。
 - name: Massive (Polygon) MCP
   repo: massive-com/mcp_massive
   section: data_mcp
@@ -45,6 +49,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: Massive.com（原 Polygon.io）官方 MCP 服务器，提供股票、期权、外汇和加密货币行情。
 - name: Maverick MCP
   repo: wshobson/maverick-mcp
   section: data_mcp
@@ -54,6 +59,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 本地 MCP 服务器，提供 Yahoo Finance 数据、技术分析、组合跟踪和 Python 回测，核心工具无需 API key。
 - name: polyledger
   repo: nahrek/polyledger
   section: data_mcp
@@ -63,6 +69,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 可断点续跑的 Polymarket 索引器，把 CLOB 市场元数据和 Polygon 链上成交汇入一个 DuckDB 文件，用于研究和回测。
 - name: SEC EDGAR MCP
   repo: stefanoamorelli/sec-edgar-mcp
   section: data_mcp
@@ -72,6 +79,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 查询 SEC EDGAR 申报文件和 XBRL 财务数据的 MCP 服务器。
 - name: yfinance MCP
   repo: narumiruna/yfinance-mcp
   section: data_mcp
@@ -81,3 +89,4 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 基于 yfinance 的 MCP 服务器，提供报价、财务报表、分析师数据、新闻、期权链和图表图片。

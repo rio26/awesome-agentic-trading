@@ -9,6 +9,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 面向 Polymarket 和 Kalshi 的预测市场交易平台，策略和数据源用 Python 编写，先回测再模拟或实盘交易。
 - name: Kalshi AI Trading Bot
   repo: ryanfrigo/kalshi-ai-trading-bot
   section: prediction_markets
@@ -18,6 +19,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 面向 Kalshi 的智能体原生工具包（命令行、MCP 服务器、Claude 技能），在交易前后衡量策略的优势是否跑赢盘口。
 - name: Kalshi Trading Bot CLI
   repo: OctagonAI/kalshi-trading-bot-cli
   section: prediction_markets
@@ -27,6 +29,7 @@
   mode: live
   language: TypeScript
   added: '2026-10-28'
+  description_zh: 对 Kalshi 市场做 LLM 基本面研究的命令行工具，独立估算概率并对照实时订单簿计算优势。
 - name: Oracle3
   repo: YichengYang-Ethan/oracle3-prediction-market-agent
   section: prediction_markets
@@ -36,6 +39,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 预测市场交易引擎和 MCP 服务器，在相关事件合约之间寻找扣除手续费后的无套利违背并交易。
 - name: Phil
   repo: bennyjo/phil
   section: prediction_markets
@@ -45,6 +49,7 @@
   mode: paper
   language: Python
   added: '2026-10-28'
+  description_zh: 自我改进的智能体，交易短期预测市场，每笔结算后改写自己的策略，持续模拟交易。
 - name: PMXT
   repo: pmxt-dev/pmxt
   section: prediction_markets
@@ -54,6 +59,7 @@
   mode: library
   language: TypeScript
   added: '2026-10-28'
+  description_zh: 预测市场（Polymarket、Kalshi 等）的统一交易 API，仿照 ccxt 设计。
 - name: Polymarket Agent Skills
   repo: Polymarket/agent-skills
   section: prediction_markets
@@ -63,6 +69,7 @@
   mode: library
   language: Markdown
   added: '2026-10-28'
+  description_zh: Polymarket 官方技能文件，为智能体提供在平台上构建所需的认证、下单、行情、websocket 和 CTF 知识。
 - name: Polymarket Kalshi Weather Bot
   repo: suislanchez/polymarket-kalshi-weather-bot
   section: prediction_markets
@@ -72,6 +79,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 利用 GFS 集合天气预报在 Kalshi 和 Polymarket 上交易每日气温市场的机器人（最后提交于 2026 年 3 月）。
 - name: Polymarket MCP Server
   repo: caiovicentino/polymarket-mcp-server
   section: prediction_markets
@@ -81,6 +89,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 把 Polymarket 行情、监控和下单作为工具开放给 Claude 等 MCP 客户端的 MCP 服务器。
 - name: Polymarket Paper Trader
   repo: agent-next/polymarket-paper-trader
   section: prediction_markets
@@ -90,6 +99,7 @@
   mode: paper
   language: Python
   added: '2026-10-28'
+  description_zh: Polymarket 模拟交易器，让智能体和策略无需资金即可测试。
 - name: Prediction Market Analysis
   repo: Jon-Becker/prediction-market-analysis
   section: prediction_markets
@@ -99,6 +109,7 @@
   mode: research
   language: Python
   added: '2026-10-28'
+  description_zh: 预测市场数据采集与分析框架，附带 Polymarket 和 Kalshi 市场与成交的大型公开数据集。
 - name: Prediction Market Backtesting
   repo: evan-kolberg/prediction-market-backtesting
   section: prediction_markets
@@ -108,3 +119,4 @@
   mode: research
   language: Python
   added: '2026-10-28'
+  description_zh: Nautilus Trader 扩展，用历史订单数据回测预测市场策略。

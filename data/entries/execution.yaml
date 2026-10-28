@@ -11,6 +11,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: Alpaca 官方 MCP 服务器，可从 MCP 客户端交易股票、ETF、加密货币和期权，并拉取账户和行情数据。
 - name: alpaca-py
   repo: alpacahq/alpaca-py
   section: execution
@@ -22,6 +23,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: Alpaca 交易与行情 API 的官方 Python SDK；美股、期权和加密货币的基础 SDK。
 - name: ccxt
   repo: ccxt/ccxt
   section: execution
@@ -32,6 +34,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 统一的交易 API，支持一百多家加密货币交易所和预测市场，提供 JavaScript、Python、C#、PHP、Go、Java 和 Rust 版本；基础 SDK。
 - name: CCXT MCP
   repo: lazy-dinosaur/ccxt-mcp
   section: execution
@@ -41,6 +44,7 @@
   mode: live
   language: TypeScript
   added: '2026-10-28'
+  description_zh: 封装 ccxt 的 MCP 服务器，让智能体查询余额、订单簿并在支持的加密货币交易所下单。
 - name: Hyperliquid Python SDK
   repo: hyperliquid-dex/hyperliquid-python-sdk
   section: execution
@@ -51,6 +55,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: Hyperliquid 永续与现货 API 的官方 Python SDK。
 - name: Interactive Brokers MCP
   repo: code-rabi/interactive-brokers-mcp
   section: execution
@@ -60,6 +65,7 @@
   mode: live
   language: JavaScript
   added: '2026-10-28'
+  description_zh: 把盈透证券的账户、行情和下单工具开放给智能体的 MCP 服务器。
 - name: Lumibot
   repo: Lumiwealth/lumibot
   section: execution
@@ -69,6 +75,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 带智能体集成的 Python 交易框架，可在十二家券商上回测、模拟和实盘交易股票、期权、期货、外汇和加密货币。
 - name: MetaTrader MCP Server
   repo: ariadng/metatrader-mcp-server
   section: execution
@@ -78,6 +85,7 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 让 LLM 通过 MetaTrader 5 平台读取数据和下单的 MCP 服务器。
 - name: Synpath
   repo: Synpath-ai/synpath
   section: execution
@@ -87,3 +95,4 @@
   mode: live
   language: Python
   added: '2026-10-28'
+  description_zh: 预测市场的统一 Python SDK 和 API，通过一个接口在 Kalshi、Polymarket、Polymarket US 和 Opinion 上下单和管理订单。

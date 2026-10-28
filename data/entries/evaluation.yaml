@@ -9,6 +9,7 @@
   mode: research
   language: Python
   added: '2026-10-28'
+  description_zh: 轻量级 Python 回测库，基于 OHLC 数据测试交易策略，带交互式图表。
 - name: Nautilus Trader
   repo: nautechsystems/nautilus_trader
   section: evaluation
@@ -18,6 +19,7 @@
   mode: research
   language: Rust
   added: '2026-10-28'
+  description_zh: Rust 原生的事件驱动交易引擎，回测确定可复现，同一套策略代码可直接实盘部署。
 - name: NOF0
   repo: wquguru/nof0
   section: evaluation
@@ -27,6 +29,7 @@
   mode: paper
   language: Go
   added: '2026-10-28'
+  description_zh: NOF1 Alpha Arena 的开源复现，让多个 LLM 智能体以相同本金在加密货币实盘上运行并比较结果。
 - name: Qlib
   repo: microsoft/qlib
   section: evaluation
@@ -36,6 +39,7 @@
   mode: research
   language: Python
   added: '2026-10-28'
+  description_zh: 微软出品的 AI 导向量化研究平台，覆盖数据、模型训练、回测和 RD-Agent 自动化研究循环。
 - name: StockBench
   repo: ChenYXxxx/stockbench
   section: evaluation
@@ -45,6 +49,7 @@
   mode: research
   language: Python
   added: '2026-10-28'
+  description_zh: 用 2024 年以后的价格、基本面和新闻数据评测 LLM 多步股票交易决策的基准，避免训练数据污染。
 - name: TraderHarness
   repo: HephaestLab/TraderHarness
   section: evaluation
@@ -54,6 +59,7 @@
   mode: research
   language: Python
   added: '2026-10-28'
+  description_zh: 面向 LLM 交易智能体的防泄漏回测、确定性回放和训练轨迹生成，支持 A 股。
 - name: vectorbt
   repo: polakowo/vectorbt
   section: evaluation
@@ -63,6 +69,7 @@
   mode: research
   language: Python
   added: '2026-10-28'
+  description_zh: 向量化的 Python 回测与研究引擎，用于快速测试大量交易想法。
 - name: What LLM Trading Agents Actually Do in Production
   repo: ProjectDXAI/continuous-record-llm-trading-agents
   section: evaluation
@@ -71,3 +78,4 @@
   - crypto
   mode: research
   added: '2026-10-28'
+  description_zh: 对 Base 链上数千个用户出资的 LLM 交易智能体六个月记录的论文产物和汇总数据，含仓位规模与利润兑现方面的发现。

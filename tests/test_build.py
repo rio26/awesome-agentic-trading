@@ -79,26 +79,29 @@ def test_section_defaults_to_file_name(tmp_path, monkeypatch):
 
 # -- rendering ---------------------------------------------------------------- #
 
-def test_render_entry_has_link_tags_and_badges():
-    line = build_readme.render_entry(entry(), {})
-    assert "[Demo](https://github.com/octo/demo) - Does a thing." in line
-    assert "`crypto`" in line and "`paper`" in line
-    assert "img.shields.io/github/stars/octo/demo" in line
+def test_digest_entry_is_one_plain_line_and_full_entry_adds_tags_and_stars():
+    digest = build_readme.render_entry(entry(), {})
+    assert digest == "- [Demo](https://github.com/octo/demo) - Does a thing."
+    full = build_readme.render_entry(entry(), {}, full=True)
+    assert full.count("\n") == 0
+    assert "`crypto`" in full and "`paper`" in full and "img.shields.io/github/stars/octo/demo" in full
+
+
+def test_zh_uses_description_zh_and_falls_back_to_english():
+    assert "做一件事。" in build_readme.render_entry(entry(description_zh="做一件事。"), {}, lang="zh")
+    assert "Does a thing." in build_readme.render_entry(entry(), {}, lang="zh")
 
 
 def test_render_entry_marks_stale_and_archived():
     old = (datetime.now(timezone.utc) - timedelta(days=400)).isoformat()
     assert "no commits in 13 months" in build_readme.render_entry(entry(), {"octo/demo": {"pushed_at": old}})
+    assert "13 个月无提交" in build_readme.render_entry(entry(), {"octo/demo": {"pushed_at": old}}, lang="zh")
     assert "**archived**" in build_readme.render_entry(entry(), {"octo/demo": {"archived": True}})
 
 
 def test_render_entry_without_repo_has_no_badges_but_shows_year():
     line = build_readme.render_entry(incident("Paper", 2024, 1), {})
     assert "(2024)" in line and "shields.io" not in line
-
-
-def test_unknown_language_is_not_rendered_as_a_tag():
-    assert "`none`" not in build_readme.render_entry(entry(language="none"), {})
 
 
 def test_github_anchor_matches_github_rules():
@@ -120,15 +123,17 @@ def test_readme_is_a_digest_with_links_to_full_pages(monkeypatch):
     entries = [entry(name=f"Agent {i}", repo=f"octo/a{i}") for i in range(8)]
     out = build_readme.render_readme(entries, SECTIONS, {})
     assert out.count("[Agent ") == build_readme.DIGEST_PER_SECTION
-    assert "[All 8 trading agents & frameworks entries →](sections/agents.md)" in out
-    assert "- [Trading agents & frameworks](#trading-agents--frameworks) · [all 8 →](sections/agents.md)" in out
+    assert "**[All 8 →](sections/agents.md)**" in out
+    assert "| [Trading agents & frameworks](#trading-agents--frameworks) (8) |" in out  # contents grid
     assert "<!-- entries: 8 -->" in out
+    zh = build_readme.render_readme(entries, SECTIONS, {}, lang="zh")
+    assert "**[全部 8 条 →](sections/agents.zh-CN.md)**" in zh and "## 目录" in zh
 
 
 def test_readme_omits_the_all_link_when_the_section_fits(monkeypatch):
     monkeypatch.setattr(build_readme, "TEMPLATES", ROOT / "templates")
     out = build_readme.render_readme([entry()], SECTIONS, {})
-    assert "entries →" not in out
+    assert "→](sections/" not in out
 
 
 def test_featured_entries_make_a_start_here_section(monkeypatch):
@@ -145,8 +150,12 @@ def test_section_pages_have_navigation_and_every_entry(monkeypatch):
     incidents = files[build_readme.SECTIONS_OUT / "incidents.md"]
     assert agents.count("[Agent ") == 8
     assert "[← README](../README.md)" in agents and "[Incidents →](incidents.md)" in agents
-    assert "[← Trading agents & frameworks](agents.md)" in incidents and "→](" not in incidents.split("\n")[3]
+    assert "[简体中文](agents.zh-CN.md)" in agents
+    assert "[← Trading agents & frameworks](agents.md)" in incidents and "Incidents →" not in incidents
     assert "8 entries, by stars" in agents and "1 entries, newest first" in incidents
+    zh = files[build_readme.SECTIONS_OUT / "agents.zh-CN.md"]
+    assert "[← 首页](../README.zh-CN.md)" in zh and "[English](agents.md)" in zh and zh.count("[Agent ") == 8
+    assert len(files) == 2 * (1 + 2)  # two languages × (README + two live sections)
 
 
 def test_shipped_data_validates_and_generated_files_are_current():

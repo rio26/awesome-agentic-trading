@@ -9,6 +9,7 @@
   mode: library
   language: Lua
   added: '2026-10-28'
+  description_zh: 架在 Alpaca MCP 服务器前面的合规防火墙，登记并记录每次调用，违规时触发 kill switch。
 - name: OpenPit
   repo: openpitkit/pit
   section: risk
@@ -18,6 +19,7 @@
   mode: library
   language: Rust
   added: '2026-10-28'
+  description_zh: 可嵌入的交易前风控引擎和 SDK，每笔订单在到达交易场所前都要通过规模、频率和偿付能力限制的检查。
 - name: Pre-trade Risk Controls
   repo: zayansalman/pretrade-risk-controls
   section: risk
@@ -27,6 +29,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 与交易场所无关的自动交易前置风控，包含 kill switch、支出上限和基于最高水位回撤的止损暂停。
 - name: RakshaQuant
   repo: HimanshuMohanty-Git24/RakshaQuant
   section: risk
@@ -36,6 +39,7 @@
   mode: paper
   language: Python
   added: '2026-10-28'
+  description_zh: 面向印度 NSE 股票的风控门控模拟交易平台，对照确定性基线衡量 AI 层扣除成本后是否真的改善了结果。
 - name: Riskstate Risk Engine
   repo: Riskstate/risk-engine
   section: risk
@@ -44,6 +48,7 @@
   - crypto
   mode: library
   added: '2026-10-28'
+  description_zh: 面向 BTC 和 ETH 的交易前风控 API，覆盖现货、永续和 DeFi 的敞口治理，带多层策略引擎。
 - name: TradeMemory Protocol
   repo: mnemox-ai/tradememory-protocol
   section: risk
@@ -53,3 +58,4 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 本地优先的 AI 交易智能体决策审计轨迹和记忆，在新交易前提示智能体自身的亏损模式，带防篡改哈希链和 MCP 工具。

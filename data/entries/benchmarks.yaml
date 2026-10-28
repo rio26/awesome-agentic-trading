@@ -9,6 +9,7 @@
   mode: paper
   language: Python
   added: '2026-10-28'
+  description_zh: 智能体原生的交易竞技场，任何编码智能体通过 SKILL.md 注册后即可在共享模拟市场中与其他智能体同场交易，附公开排行榜。
 - name: Alpha Arena (nof1.ai)
   url: https://alphaarena.ai/
   section: benchmarks
@@ -16,3 +17,4 @@
   year: 2025
   featured: true
   added: '2026-10-28'
+  description_zh: 研究机构 nof1.ai 举办的真金实盘比赛，每个前沿 LLM 领取 1 万美元，在相同提示词下交易 Hyperliquid 加密永续合约；第一季（2025 年 10 至 11 月）六个模型中四个亏损。

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" font-family="-apple-system, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8f98"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#ffffff" rx="12"/>
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="600" fill="#1f2328">智能体交易流水线</text>
+  <text x="480" y="58" text-anchor="middle" font-size="13" fill="#656d76">列表的每个板块对应一个方框。风控包住一切，评测在最底层。</text>
+
+  <!-- Risk envelope -->
+  <rect x="28" y="84" width="904" height="196" rx="14" fill="#fff5f5" stroke="#e5484d" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="48" y="106" font-size="13" font-weight="600" fill="#c62828">风控与护栏</text>
+  <text x="48" y="124" font-size="11.5" fill="#8a3b3b">仓位限制 · kill switch · 交易前检查 · 提示词注入防御 · 监管</text>
+
+  <!-- Data -->
+  <rect x="60" y="146" width="240" height="112" rx="10" fill="#eef4ff" stroke="#3b6fd6" stroke-width="1.5"/>
+  <text x="180" y="172" text-anchor="middle" font-size="14" font-weight="600" fill="#1f3f8a">数据与研究</text>
+  <text x="180" y="194" text-anchor="middle" font-size="11.5" fill="#2f4a7a">价格 · 基本面 · 申报文件 · 新闻</text>
+  <text x="180" y="212" text-anchor="middle" font-size="11.5" fill="#2f4a7a">行情数据 MCP 服务器</text>
+  <text x="180" y="238" text-anchor="middle" font-size="11" fill="#6b7a99">智能体能看到什么</text>
+
+  <!-- Decision -->
+  <rect x="360" y="146" width="240" height="112" rx="10" fill="#f1fbf3" stroke="#2e9e5b" stroke-width="1.5"/>
+  <text x="480" y="172" text-anchor="middle" font-size="14" font-weight="600" fill="#1d5c36">决策</text>
+  <text x="480" y="194" text-anchor="middle" font-size="11.5" fill="#2f5e42">LLM 交易智能体 · 多智能体公司</text>
+  <text x="480" y="212" text-anchor="middle" font-size="11.5" fill="#2f5e42">预测市场智能体 · 技能</text>
+  <text x="480" y="238" text-anchor="middle" font-size="11" fill="#6b8a74">它怎么决策</text>
+
+  <!-- Execution -->
+  <rect x="660" y="146" width="240" height="112" rx="10" fill="#fff8ec" stroke="#d98b14" stroke-width="1.5"/>
+  <text x="780" y="172" text-anchor="middle" font-size="14" font-weight="600" fill="#7a4a04">执行</text>
+  <text x="780" y="194" text-anchor="middle" font-size="11.5" fill="#7a5a2a">券商与交易所 MCP 服务器 · SDK</text>
+  <text x="780" y="212" text-anchor="middle" font-size="11.5" fill="#7a5a2a">先模拟，再实盘</text>
+  <text x="780" y="238" text-anchor="middle" font-size="11" fill="#9a8260">它怎么下单</text>
+
+  <!-- Arrows between boxes -->
+  <line x1="300" y1="202" x2="358" y2="202" stroke="#8a8f98" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="202" x2="658" y2="202" stroke="#8a8f98" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Evaluation -->
+  <rect x="60" y="306" width="840" height="86" rx="10" fill="#f6f1fb" stroke="#7c4dbd" stroke-width="1.5"/>
+  <text x="480" y="332" text-anchor="middle" font-size="14" font-weight="600" fill="#4a2a7a">评测</text>
+  <text x="480" y="354" text-anchor="middle" font-size="11.5" fill="#5a4a7a">回测引擎 · 模拟交易沙盒 · 实盘竞技场与排行榜</text>
+  <text x="480" y="374" text-anchor="middle" font-size="11" fill="#8a7aa9">怎么知道它有效，以及它失效时的公开记录（事故）</text>
+
+  <!-- Feedback arrows from evaluation up to decision and execution -->
+  <line x1="480" y1="306" x2="480" y2="262" stroke="#8a8f98" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <line x1="780" y1="306" x2="780" y2="262" stroke="#8a8f98" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+</svg>

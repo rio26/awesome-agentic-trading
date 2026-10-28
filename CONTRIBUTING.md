@@ -24,13 +24,14 @@ The weekly job marks entries that go quiet; maintainers remove them after a furt
      repo: owner/name            # GitHub repos; use `url:` for anything else
      section: agents             # must match the file name; keys are in data/sections.yaml
      description: One factual sentence ending with a full stop. No marketing, no emojis.
+     description_zh: 可选的中文描述；缺省时中文页面回退为英文。
      markets: [equities, crypto] # equities, crypto, futures, options, forex, prediction-markets, multi-asset
      mode: paper                 # live, paper, research, library
      language: Python
      added: 2026-10-28
    ```
 
-2. Run `python scripts/build_readme.py` (needs `pip install -r requirements.txt`) and commit the YAML together with the regenerated `README.md` and `sections/*.md`. CI fails if they disagree. `README.md` shows only the top five per section; the full list is the section page.
+2. Run `python scripts/build_readme.py` (needs `pip install -r requirements.txt`) and commit the YAML together with the regenerated `README.md`, `README.zh-CN.md` and `sections/*.md`. CI fails if they disagree. `README.md` shows only the top five per section; the full list is the section page.
 3. One entry per pull request, with a sentence on why it belongs. If you are the author, say so.
 
 ## Style for descriptions

@@ -9,6 +9,7 @@
   mode: library
   language: Markdown
   added: '2026-10-28'
+  description_zh: 预测市场工具精选列表，含智能体、分析、API、仪表盘和跟单。
 - name: awesome-crypto-trading-bots
   repo: botcrypto-io/awesome-crypto-trading-bots
   section: related_lists
@@ -18,6 +19,7 @@
   mode: library
   language: Markdown
   added: '2026-10-28'
+  description_zh: 开源加密货币交易机器人及相关工具的精选列表。
 - name: awesome-finance-mcp
   repo: BlockRunAI/awesome-finance-mcp
   section: related_lists
@@ -27,6 +29,7 @@
   mode: library
   language: Markdown
   added: '2026-10-28'
+  description_zh: 面向 AI 金融智能体的 MCP 服务器精选列表。
 - name: awesome-quant
   repo: wilsonfreitas/awesome-quant
   section: related_lists
@@ -36,6 +39,7 @@
   mode: library
   language: HTML
   added: '2026-10-28'
+  description_zh: 量化金融的库、包和资源精选列表。
 - name: awesome-quant (thuquant)
   repo: thuquant/awesome-quant
   section: related_lists
@@ -45,6 +49,7 @@
   mode: library
   language: Markdown
   added: '2026-10-28'
+  description_zh: 中文量化资源、数据源和工具索引。
 - name: awesome-systematic-trading
   repo: paperswithbacktest/awesome-systematic-trading
   section: related_lists
@@ -54,6 +59,7 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 系统化交易的库、策略、书籍和教程精选列表。
 - name: awesome-trading-agents
   repo: LLMQuant/awesome-trading-agents
   section: related_lists
@@ -63,6 +69,7 @@
   mode: library
   language: Markdown
   added: '2026-10-28'
+  description_zh: LLM 驱动的交易智能体、MCP 服务器和智能体技能精选列表，覆盖研究、策略和执行。
 - name: financial-machine-learning
   repo: firmai/financial-machine-learning
   section: related_lists
@@ -72,3 +79,4 @@
   mode: library
   language: Python
   added: '2026-10-28'
+  description_zh: 实用金融机器学习工具和应用的精选列表（最后提交于 2025 年 1 月）。

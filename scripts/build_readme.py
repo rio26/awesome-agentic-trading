@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Render README.md and sections/*.md from data/entries/*.yaml and data/sections.yaml.
+"""Render README.md, README.zh-CN.md and sections/*.md from data/.
 
-README.md is a fixed-size digest: for every section, the top entries by stars plus a
-link to the full page. sections/<key>.md holds every entry of that section.
+README is a fixed-size digest: a grid of sections, then the top entries of each
+section by stars with a link to the full page. sections/<key>.md (and
+sections/<key>.zh-CN.md) hold every entry of that section.
 
-    python scripts/build_readme.py          # write README.md and sections/*.md
+    python scripts/build_readme.py          # write all generated files
     python scripts/build_readme.py --check  # exit 1 if any generated file is out of date (CI)
 """
 from __future__ import annotations
@@ -21,9 +22,28 @@ from common import (  # noqa: E402
 )
 
 TEMPLATES = ROOT / "templates"
-README = ROOT / "README.md"
 DIGEST_PER_SECTION = 5
-BADGE = "https://img.shields.io/github/{kind}/{repo}?style=flat-square&labelColor=2b2b2b&color=6b6b6b"
+LANGS = ("en", "zh")
+STARS_BADGE = "https://img.shields.io/github/stars/{repo}?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label="
+
+T = {
+    "en": {
+        "readme": "README.md", "suffix": "", "header": "header.md", "footer": "footer.md",
+        "contents": "Contents", "start_here": "Start here",
+        "start_blurb": "A few entries that give the shape of the field in an evening.",
+        "all": "All {n} →", "entries_by_stars": "{n} entries, by stars.", "entries_by_year": "{n} entries, newest first.",
+        "edit": "Add one by editing `data/entries/{key}.yaml`.", "back": "← README", "lang_switch": "[简体中文]({page})",
+        "archived": "archived", "stale": "no commits in {m} months",
+    },
+    "zh": {
+        "readme": "README.zh-CN.md", "suffix": ".zh-CN", "header": "header.zh-CN.md", "footer": "footer.zh-CN.md",
+        "contents": "目录", "start_here": "从这里开始",
+        "start_blurb": "一个晚上就能看出这个领域大致轮廓的几条。",
+        "all": "全部 {n} 条 →", "entries_by_stars": "共 {n} 条，按 star 排序。", "entries_by_year": "共 {n} 条，最新在前。",
+        "edit": "新增条目请编辑 `data/entries/{key}.yaml`。", "back": "← 首页", "lang_switch": "[English]({page})",
+        "archived": "已归档", "stale": "{m} 个月无提交",
+    },
+}
 
 
 def github_anchor(title: str) -> str:
@@ -32,44 +52,46 @@ def github_anchor(title: str) -> str:
     return cleaned.replace(" ", "-")
 
 
-def badges(repo: str) -> str:
-    stars = BADGE.format(kind="stars", repo=repo) + "&label=stars"
-    updated = BADGE.format(kind="last-commit", repo=repo) + "&label=updated"
-    return f'<img src="{stars}" alt="stars"> <img src="{updated}" alt="last commit">'
+def title_of(section: dict, lang: str) -> str:
+    return section.get("title_zh") or section["title"] if lang == "zh" else section["title"]
+
+
+def intro_of(section: dict, lang: str) -> str:
+    return (section.get("intro_zh") or section.get("intro") or "") if lang == "zh" else (section.get("intro") or "")
+
+
+def desc_of(e: dict, lang: str) -> str:
+    return (e.get("description_zh") or e["description"]).strip() if lang == "zh" else e["description"].strip()
+
+
+def status_note(e: dict, meta: dict, lang: str) -> str:
+    info = meta.get(e.get("repo", ""), {})
+    if not info:
+        return ""
+    if info.get("archived"):
+        return f" · **{T[lang]['archived']}**"
+    age = days_since(info.get("pushed_at"))
+    if age is not None and age > STALE_DAYS:
+        return " · " + T[lang]["stale"].format(m=age // 30)
+    return ""
 
 
 def tags(e: dict) -> str:
     parts = [f"`{m}`" for m in (e.get("markets") or [])]
     if e.get("mode"):
         parts.append(f"`{e['mode']}`")
-    if e.get("language") and str(e["language"]).lower() not in ("none", "-", "null"):
-        parts.append(f"`{e['language']}`")
     return " ".join(parts)
 
 
-def status_note(e: dict, meta: dict) -> str:
-    info = meta.get(e.get("repo", ""), {})
-    if not info:
-        return ""
-    if info.get("archived"):
-        return " · **archived**"
-    age = days_since(info.get("pushed_at"))
-    if age is not None and age > STALE_DAYS:
-        return f" · no commits in {age // 30} months"
-    return ""
-
-
-def render_entry(e: dict, meta: dict) -> str:
-    name, url, desc = e["name"], entry_url(e), e["description"].strip()
+def render_entry(e: dict, meta: dict, lang: str = "en", full: bool = False) -> str:
+    """One line per entry. Digest: name - description. Full page: adds tags and a stars badge."""
     year = f" ({e['year']})" if e.get("year") else ""
-    line = f"- [{name}]({url}) - {desc}{year}{status_note(e, meta)}"
-    extras = []
-    if tags(e):
-        extras.append(tags(e))
-    if e.get("repo"):
-        extras.append(badges(e["repo"]))
-    if extras:
-        line += "  \n  " + " &nbsp; ".join(extras)
+    line = f"- [{e['name']}]({entry_url(e)}) - {desc_of(e, lang)}{year}{status_note(e, meta, lang)}"
+    if full:
+        if tags(e):
+            line += " " + tags(e)
+        if e.get("repo"):
+            line += f' <img src="{STARS_BADGE.format(repo=e["repo"])}" alt="stars">'
     return line
 
 
@@ -78,81 +100,98 @@ def stars_of(e: dict, meta: dict) -> int:
 
 
 def ordered(items: list[dict], section: dict, meta: dict) -> list[dict]:
-    """Full-page order: by year (newest first) when the section says so, else by stars then name."""
+    """By year (newest first) when the section says so, else by stars then name."""
     if section.get("sort") == "year":
         return sorted(items, key=lambda e: (-int(e.get("year") or 0), e["name"].lower()))
     return sorted(items, key=lambda e: (-stars_of(e, meta), e["name"].lower()))
 
 
-def render_section_page(section: dict, items: list[dict], meta: dict, prev: dict | None, nxt: dict | None) -> str:
-    nav = ["[← README](../README.md)"]
-    if prev:
-        nav.append(f"[← {prev['title']}]({prev['key']}.md)")
-    if nxt:
-        nav.append(f"[{nxt['title']} →]({nxt['key']}.md)")
-    lines = [
-        f"<!-- Generated by scripts/build_readme.py from data/entries/{section['key']}.yaml. Edit the data, not this file. -->",
-        f"# {section['title']}",
-        "",
-        " · ".join(nav),
-        "",
-    ]
-    if section.get("intro"):
-        lines += [section["intro"].strip(), ""]
-    order_note = "newest first" if section.get("sort") == "year" else "by stars"
-    lines += [f"{len(items)} entries, {order_note}. Add one by editing `data/entries/{section['key']}.yaml`.", ""]
-    lines += [render_entry(e, meta) for e in items]
-    lines += ["", " · ".join(nav), ""]
-    return "\n".join(lines)
+def page_name(section: dict, lang: str) -> str:
+    return f"{section['key']}{T[lang]['suffix']}.md"
 
 
-def render_readme(entries: list[dict], sections: list[dict], meta: dict) -> str:
-    header = (TEMPLATES / "header.md").read_text(encoding="utf-8")
-    footer = (TEMPLATES / "footer.md").read_text(encoding="utf-8")
+def contents_grid(sections: list[dict], counts: dict[str, int], lang: str) -> list[str]:
+    """Section links as a 3-column table, like a site map."""
+    cells = [f"[{title_of(s, lang)}](#{github_anchor(title_of(s, lang))}) ({counts[s['key']]})" for s in sections if counts[s["key"]]]
+    rows = [cells[i:i + 3] for i in range(0, len(cells), 3)]
+    out = ["| | | |", "|---|---|---|"]
+    for row in rows:
+        out.append("| " + " | ".join(row + [""] * (3 - len(row))) + " |")
+    return out
+
+
+def render_readme(entries: list[dict], sections: list[dict], meta: dict, lang: str = "en") -> str:
+    t = T[lang]
+    header = (TEMPLATES / t["header"]).read_text(encoding="utf-8")
+    footer = (TEMPLATES / t["footer"]).read_text(encoding="utf-8")
 
     by_section: dict[str, list[dict]] = {s["key"]: [] for s in sections}
     for e in entries:
         by_section[e["section"]].append(e)
+    counts = {k: len(v) for k, v in by_section.items()}
 
-    toc = ["## Contents", ""]
-    body: list[str] = []
+    body: list[str] = [f"## {t['contents']}", ""] + contents_grid(sections, counts, lang) + [""]
 
     featured = [e for e in entries if e.get("featured")]
     if featured:
-        toc.append("- [Start here](#start-here)")
-        body += ["## Start here", "", "A few entries that give the shape of the field in an evening.", ""]
-        body += [render_entry(e, meta) for e in featured[:5]]
+        body += [f"## {t['start_here']}", "", t["start_blurb"], ""]
+        body += [render_entry(e, meta, lang) for e in featured[:5]]
         body.append("")
 
     for s in sections:
         items = ordered(by_section[s["key"]], s, meta)
         if not items:
             continue
-        page = f"sections/{s['key']}.md"
-        toc.append(f"- [{s['title']}](#{github_anchor(s['title'])}) · [all {len(items)} →]({page})")
-        body += [f"## {s['title']}", ""]
-        if s.get("intro"):
-            body += [s["intro"].strip(), ""]
-        body += [render_entry(e, meta) for e in items[:DIGEST_PER_SECTION]]
+        page = f"sections/{page_name(s, lang)}"
+        body += [f"## {title_of(s, lang)}", ""]
+        if intro_of(s, lang):
+            body += [intro_of(s, lang).strip(), ""]
+        body += [render_entry(e, meta, lang) for e in items[:DIGEST_PER_SECTION]]
         if len(items) > DIGEST_PER_SECTION:
-            body += ["", f"**[All {len(items)} {s['title'].split(' ·')[0].lower()} entries →]({page})**"]
+            body += ["", f"**[{t['all'].format(n=len(items))}]({page})**"]
         body.append("")
 
-    counts = f"<!-- entries: {len(entries)} -->"
-    return "\n".join([header.rstrip(), "", *toc, "", *body, footer.strip(), counts, ""])
+    return "\n".join([header.rstrip(), "", *body, footer.strip(), f"<!-- entries: {len(entries)} -->", ""])
+
+
+def render_section_page(section: dict, items: list[dict], meta: dict, lang: str, prev: dict | None, nxt: dict | None) -> str:
+    t = T[lang]
+    other = "zh" if lang == "en" else "en"
+    nav = [f"[{t['back']}](../{t['readme']})"]
+    if prev:
+        nav.append(f"[← {title_of(prev, lang)}]({page_name(prev, lang)})")
+    if nxt:
+        nav.append(f"[{title_of(nxt, lang)} →]({page_name(nxt, lang)})")
+    nav.append(t["lang_switch"].format(page=page_name(section, other)))
+    count_line = (t["entries_by_year"] if section.get("sort") == "year" else t["entries_by_stars"]).format(n=len(items))
+    lines = [
+        f"<!-- Generated by scripts/build_readme.py from data/entries/{section['key']}.yaml. Edit the data, not this file. -->",
+        f"# {title_of(section, lang)}",
+        "",
+        " · ".join(nav),
+        "",
+    ]
+    if intro_of(section, lang):
+        lines += [intro_of(section, lang).strip(), ""]
+    lines += [f"{count_line} {t['edit'].format(key=section['key'])}", ""]
+    lines += [render_entry(e, meta, lang, full=True) for e in items]
+    lines += ["", " · ".join(nav), ""]
+    return "\n".join(lines)
 
 
 def render_all(entries: list[dict], sections: list[dict], meta: dict) -> dict[Path, str]:
     """Every generated file, keyed by path."""
-    out: dict[Path, str] = {README: render_readme(entries, sections, meta)}
     by_section: dict[str, list[dict]] = {s["key"]: [] for s in sections}
     for e in entries:
         by_section[e["section"]].append(e)
     live = [s for s in sections if by_section[s["key"]]]
-    for i, s in enumerate(live):
-        prev = live[i - 1] if i > 0 else None
-        nxt = live[i + 1] if i + 1 < len(live) else None
-        out[SECTIONS_OUT / f"{s['key']}.md"] = render_section_page(s, ordered(by_section[s["key"]], s, meta), meta, prev, nxt)
+    out: dict[Path, str] = {}
+    for lang in LANGS:
+        out[ROOT / T[lang]["readme"]] = render_readme(entries, sections, meta, lang)
+        for i, s in enumerate(live):
+            prev = live[i - 1] if i > 0 else None
+            nxt = live[i + 1] if i + 1 < len(live) else None
+            out[SECTIONS_OUT / page_name(s, lang)] = render_section_page(s, ordered(by_section[s["key"]], s, meta), meta, lang, prev, nxt)
     return out
 
 
@@ -185,7 +224,7 @@ def main(argv=None) -> int:
                 print(f"orphan page: {p.relative_to(ROOT)}", file=sys.stderr)
             print("run `python scripts/build_readme.py`", file=sys.stderr)
             return 1
-        print(f"generated files are up to date ({len(entries)} entries, {len(files) - 1} section pages)")
+        print(f"generated files are up to date ({len(entries)} entries, {len(files)} files)")
         return 0
 
     SECTIONS_OUT.mkdir(exist_ok=True)
@@ -194,7 +233,7 @@ def main(argv=None) -> int:
     for p in SECTIONS_OUT.glob("*.md"):
         if p not in files:
             p.unlink()
-    print(f"wrote README.md and {len(files) - 1} section pages for {len(entries)} entries")
+    print(f"wrote {len(files)} files for {len(entries)} entries")
     return 0
 
 

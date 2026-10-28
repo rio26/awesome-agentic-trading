@@ -6,39 +6,46 @@
   description: 2020 principles-based rule (replacing the withdrawn Regulation AT) requiring designated contract markets to adopt rules and pre-trade risk controls that limit disruptions from electronic trading and to notify the CFTC of significant disruptions.
   year: 2020
   added: '2026-10-28'
+  description_zh: 2020 年基于原则的规则（取代已撤回的 Regulation AT），要求指定合约市场制定规则和交易前风控以限制电子交易造成的扰动，并向 CFTC 报告重大扰动。
 - name: ESMA Supervisory Briefing on Algorithmic Trading
   url: https://www.esma.europa.eu/press-news/esma-news/esma-issues-supervisory-briefing-algorithmic-trading
   section: regulation
   description: February 2026 non-binding briefing giving EU national regulators common expectations on pre-trade controls, governance, testing and outsourcing under MiFID II, and adding considerations for supervising the use of AI in algorithmic trading.
   year: 2026
   added: '2026-10-28'
+  description_zh: 2026 年 2 月的非约束性简报，为欧盟各国监管机构在 MiFID II 下的交易前控制、治理、测试和外包给出统一预期，并新增对算法交易中使用 AI 的监管考量。
 - name: FCA - Algorithmic Trading Compliance in Wholesale Markets
   url: https://www.fca.org.uk/publications/multi-firm-reviews/algorithmic-trading-compliance-wholesale-markets
   section: regulation
   description: 2018 UK FCA multi-firm review setting out good and poor practice in five areas - defining algorithmic trading, development and testing, risk controls, governance and oversight, and market conduct.
   year: 2018
   added: '2026-10-28'
+  description_zh: 2018 年英国 FCA 多机构审查，在五个方面列出良好和不良实践：算法交易的界定、开发与测试、风控、治理与监督、市场行为。
 - name: FINRA 2026 Regulatory Oversight Report - GenAI and AI agents
   url: https://www.finra.org/rules-guidance/guidance/reports/2026-finra-annual-regulatory-oversight-report/gen-ai
   section: regulation
   description: December 2025 section that for the first time addresses AI agents, naming autonomy without human approval, scope creep beyond user intent, auditability of multi-step reasoning, data sensitivity and poorly designed reward functions as risks, and asking firms to decide where humans stay in the loop.
   year: 2025
   added: '2026-10-28'
+  description_zh: 2025 年 12 月的章节，首次专门讨论 AI 智能体，点名无人审批的自主性、超出用户意图的范围蔓延、多步推理的可审计性、数据敏感性和设计不当的奖励函数等风险，并要求机构明确人在哪些环节必须留在回路中。
 - name: FINRA Regulatory Notice 15-09 - Algorithmic Trading Supervision and Control
   url: https://www.finra.org/rules-guidance/notices/15-09
   section: regulation
   description: 2015 FINRA guidance on effective supervision and control practices for firms running algorithmic strategies, covering risk assessment, code development, testing and validation, trading-system controls and compliance.
   year: 2015
   added: '2026-10-28'
+  description_zh: 2015 年 FINRA 指引，面向运行算法策略的机构给出有效监督和控制实践，覆盖风险评估、代码开发、测试验证、交易系统控制和合规。
 - name: MiFID II RTS 6 - Commission Delegated Regulation (EU) 2017/589
   url: https://eur-lex.europa.eu/eli/reg_del/2017/589/oj
   section: regulation
   description: EU regulatory technical standard on organisational requirements for investment firms engaged in algorithmic trading, mandating pre-deployment testing in non-production environments, kill functionality, pre-trade controls (price collars, order and message limits), annual self-assessment and five-year records.
   year: 2017
   added: '2026-10-28'
+  description_zh: 欧盟关于从事算法交易的投资机构组织要求的监管技术标准，强制要求在非生产环境做部署前测试、具备 kill 功能、设置交易前控制（价格区间、订单和消息限额）、年度自评和五年留档。
 - name: SEC Division of Examinations FY2026 Priorities
   url: https://www.sec.gov/files/2026-exam-priorities.pdf
   section: regulation
   description: November 2025 priorities stating examiners will review the accuracy of firms' AI-related representations and whether policies, controls and human oversight adequately supervise automated advisory tools and trading algorithms.
   year: 2025
   added: '2026-10-28'
+  description_zh: 2025 年 11 月发布的优先事项，称检查人员将审查机构对 AI 相关陈述的准确性，以及政策、控制和人工监督是否充分覆盖自动化投顾工具和交易算法。
