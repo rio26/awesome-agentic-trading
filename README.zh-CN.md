@@ -59,7 +59,7 @@
 
 把价格、基本面、申报文件和新闻喂给智能体的 MCP 服务器和工具。决策层的上限取决于它能看到什么。
 
-- [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - Financial Datasets API 的 MCP 服务器，覆盖行情、基本面、申报文件和新闻（最后提交于 2025 年中）。 · 16 个月无提交
+- [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - Financial Datasets API 的 MCP 服务器，覆盖行情、基本面、申报文件和新闻（最后提交于 2025 年中）。 · 17 个月无提交
 - [Maverick MCP](https://github.com/wshobson/maverick-mcp) - 本地 MCP 服务器，提供 Yahoo Finance 数据、技术分析、组合跟踪和 Python 回测，核心工具无需 API key。
 - [polyledger](https://github.com/nahrek/polyledger) - 可断点续跑的 Polymarket 索引器，把 CLOB 市场元数据和 Polygon 链上成交汇入一个 DuckDB 文件，用于研究和回测。
 - [Massive (Polygon) MCP](https://github.com/massive-com/mcp_massive) - Massive.com（原 Polygon.io）官方 MCP 服务器，提供股票、期权、外汇和加密货币行情。
@@ -99,7 +99,7 @@
 - [Nautilus Trader](https://github.com/nautechsystems/nautilus_trader) - Rust 原生的事件驱动交易引擎，回测确定可复现，同一套策略代码可直接实盘部署。
 - [vectorbt](https://github.com/polakowo/vectorbt) - 向量化的 Python 回测与研究引擎，用于快速测试大量交易想法。
 - [backtesting.py](https://github.com/kernc/backtesting.py) - 轻量级 Python 回测库，基于 OHLC 数据测试交易策略，带交互式图表。
-- [NOF0](https://github.com/wquguru/nof0) - NOF1 Alpha Arena 的开源复现，让多个 LLM 智能体以相同本金在加密货币实盘上运行并比较结果。 · 10 个月无提交
+- [NOF0](https://github.com/wquguru/nof0) - NOF1 Alpha Arena 的开源复现，让多个 LLM 智能体以相同本金在加密货币实盘上运行并比较结果。 · 11 个月无提交
 
 **[全部 9 条 →](sections/evaluation.zh-CN.md)**
 

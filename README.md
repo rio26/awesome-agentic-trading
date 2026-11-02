@@ -59,7 +59,7 @@ Agents and tooling for Polymarket, Kalshi and similar venues. Binary contracts, 
 
 MCP servers and agent tools that feed prices, fundamentals, filings and news into an agent. The decision layer is only as good as what it can see.
 
-- [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - MCP server for the Financial Datasets API covering prices, fundamentals, filings and news (last pushed mid-2025). · no commits in 16 months
+- [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - MCP server for the Financial Datasets API covering prices, fundamentals, filings and news (last pushed mid-2025). · no commits in 17 months
 - [Maverick MCP](https://github.com/wshobson/maverick-mcp) - Local MCP server for Yahoo Finance data, technical analysis, portfolio tracking and Python backtesting with no API key for core tools.
 - [polyledger](https://github.com/nahrek/polyledger) - Resumable Polymarket indexer that collects CLOB market metadata and on-chain Polygon trades into a single DuckDB file for research and backtests.
 - [Massive (Polygon) MCP](https://github.com/massive-com/mcp_massive) - Official MCP server for Massive.com (formerly Polygon.io) market data covering stocks, options, forex and crypto.
@@ -99,7 +99,7 @@ Engines and harnesses for testing a strategy before it touches money. For LLM ag
 - [Nautilus Trader](https://github.com/nautechsystems/nautilus_trader) - Rust-native, event-driven trading engine with deterministic backtesting and the same strategy code for live deployment.
 - [vectorbt](https://github.com/polakowo/vectorbt) - Vectorised backtesting and research engine for testing large numbers of trading ideas quickly in Python.
 - [backtesting.py](https://github.com/kernc/backtesting.py) - Lightweight Python library for backtesting trading strategies on OHLC data with interactive plots.
-- [NOF0](https://github.com/wquguru/nof0) - Open reproduction of the NOF1 Alpha Arena that runs several LLM agents from equal starting capital on live crypto markets and compares their results. · no commits in 10 months
+- [NOF0](https://github.com/wquguru/nof0) - Open reproduction of the NOF1 Alpha Arena that runs several LLM agents from equal starting capital on live crypto markets and compares their results. · no commits in 11 months
 
 **[All 9 →](sections/evaluation.md)**
 
