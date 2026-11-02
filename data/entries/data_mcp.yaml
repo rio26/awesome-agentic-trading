@@ -60,16 +60,6 @@
   language: Python
   added: '2026-10-28'
   description_zh: 本地 MCP 服务器，提供 Yahoo Finance 数据、技术分析、组合跟踪和 Python 回测，核心工具无需 API key。
-- name: polyledger
-  repo: nahrek/polyledger
-  section: data_mcp
-  description: Resumable Polymarket indexer that collects CLOB market metadata and on-chain Polygon trades into a single DuckDB file for research and backtests.
-  markets:
-  - prediction-markets
-  mode: library
-  language: Python
-  added: '2026-10-28'
-  description_zh: 可断点续跑的 Polymarket 索引器，把 CLOB 市场元数据和 Polygon 链上成交汇入一个 DuckDB 文件，用于研究和回测。
 - name: SEC EDGAR MCP
   repo: stefanoamorelli/sec-edgar-mcp
   section: data_mcp

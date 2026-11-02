@@ -17,7 +17,7 @@ Each section shows its top five by stars; the `All N →` link opens the full pa
 
 | | | |
 |---|---|---|
-| [Trading agents & frameworks](#trading-agents--frameworks) (14) | [Prediction-market agents](#prediction-market-agents) (12) | [Market data & research tools](#market-data--research-tools) (9) |
+| [Trading agents & frameworks](#trading-agents--frameworks) (14) | [Prediction-market agents](#prediction-market-agents) (12) | [Market data & research tools](#market-data--research-tools) (8) |
 | [Execution: broker & exchange access](#execution-broker--exchange-access) (9) | [Risk & guardrails](#risk--guardrails) (6) | [Backtesting & evaluation](#backtesting--evaluation) (9) |
 | [Benchmarks & leaderboards](#benchmarks--leaderboards) (2) | [Incidents & postmortems](#incidents--postmortems) (6) | [Regulation & compliance](#regulation--compliance) (7) |
 | [Chinese & A-share tools](#chinese--a-share-tools) (9) | [Related lists](#related-lists) (8) |  |
@@ -61,11 +61,11 @@ MCP servers and agent tools that feed prices, fundamentals, filings and news int
 
 - [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - MCP server for the Financial Datasets API covering prices, fundamentals, filings and news (last pushed mid-2025). · no commits in 17 months
 - [Maverick MCP](https://github.com/wshobson/maverick-mcp) - Local MCP server for Yahoo Finance data, technical analysis, portfolio tracking and Python backtesting with no API key for core tools.
-- [polyledger](https://github.com/nahrek/polyledger) - Resumable Polymarket indexer that collects CLOB market metadata and on-chain Polygon trades into a single DuckDB file for research and backtests.
 - [Massive (Polygon) MCP](https://github.com/massive-com/mcp_massive) - Official MCP server for Massive.com (formerly Polygon.io) market data covering stocks, options, forex and crypto.
 - [SEC EDGAR MCP](https://github.com/stefanoamorelli/sec-edgar-mcp) - MCP server for querying SEC EDGAR filings and XBRL financial data.
+- [Alpha Vantage MCP](https://github.com/alphavantage/alpha_vantage_mcp) - Official Alpha Vantage MCP server exposing prices, fundamentals, technical indicators and economic data as tools.
 
-**[All 9 →](sections/data_mcp.md)**
+**[All 8 →](sections/data_mcp.md)**
 
 ## Execution: broker & exchange access
 
@@ -165,4 +165,4 @@ One entry per pull request, into the section's file under [`data/entries/`](data
 ## License
 
 [MIT](LICENSE). Linked projects keep their own licenses.
-<!-- entries: 91 -->
+<!-- entries: 90 -->

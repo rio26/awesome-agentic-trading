@@ -5,11 +5,10 @@
 
 把价格、基本面、申报文件和新闻喂给智能体的 MCP 服务器和工具。决策层的上限取决于它能看到什么。
 
-共 9 条，按 star 排序。 新增条目请编辑 `data/entries/data_mcp.yaml`。
+共 8 条，按 star 排序。 新增条目请编辑 `data/entries/data_mcp.yaml`。
 
 - [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - Financial Datasets API 的 MCP 服务器，覆盖行情、基本面、申报文件和新闻（最后提交于 2025 年中）。 · 17 个月无提交 `equities` `library` <img src="https://img.shields.io/github/stars/financial-datasets/mcp-server?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [Maverick MCP](https://github.com/wshobson/maverick-mcp) - 本地 MCP 服务器，提供 Yahoo Finance 数据、技术分析、组合跟踪和 Python 回测，核心工具无需 API key。 `equities` `library` <img src="https://img.shields.io/github/stars/wshobson/maverick-mcp?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
-- [polyledger](https://github.com/nahrek/polyledger) - 可断点续跑的 Polymarket 索引器，把 CLOB 市场元数据和 Polygon 链上成交汇入一个 DuckDB 文件，用于研究和回测。 `prediction-markets` `library` <img src="https://img.shields.io/github/stars/nahrek/polyledger?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [Massive (Polygon) MCP](https://github.com/massive-com/mcp_massive) - Massive.com（原 Polygon.io）官方 MCP 服务器，提供股票、期权、外汇和加密货币行情。 `multi-asset` `library` <img src="https://img.shields.io/github/stars/massive-com/mcp_massive?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [SEC EDGAR MCP](https://github.com/stefanoamorelli/sec-edgar-mcp) - 查询 SEC EDGAR 申报文件和 XBRL 财务数据的 MCP 服务器。 `equities` `library` <img src="https://img.shields.io/github/stars/stefanoamorelli/sec-edgar-mcp?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [Alpha Vantage MCP](https://github.com/alphavantage/alpha_vantage_mcp) - Alpha Vantage 官方 MCP 服务器，把行情、基本面、技术指标和经济数据暴露为工具。 `multi-asset` `library` <img src="https://img.shields.io/github/stars/alphavantage/alpha_vantage_mcp?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">

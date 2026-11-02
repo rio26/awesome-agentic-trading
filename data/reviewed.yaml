@@ -32,3 +32,11 @@
   date: 2026-10-28
   revisit: 2026-11-04
   reason: Candid and MIT, but 221 forks on 261 stars is an unusual ratio; re-check.
+- repo: nahrek/polyledger
+  decision: rejected
+  date: 2026-11-02
+  reason: Removed from the list; the repository and its owner's account return 404.
+- repo: cplj/axiocairn-mcp
+  decision: rejected
+  date: 2026-11-02
+  reason: Documentation for a hosted, account-gated service with paid plans; the repository states it does not contain the server.

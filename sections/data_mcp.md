@@ -5,11 +5,10 @@
 
 MCP servers and agent tools that feed prices, fundamentals, filings and news into an agent. The decision layer is only as good as what it can see.
 
-9 entries, by stars. Add one by editing `data/entries/data_mcp.yaml`.
+8 entries, by stars. Add one by editing `data/entries/data_mcp.yaml`.
 
 - [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - MCP server for the Financial Datasets API covering prices, fundamentals, filings and news (last pushed mid-2025). · no commits in 17 months `equities` `library` <img src="https://img.shields.io/github/stars/financial-datasets/mcp-server?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [Maverick MCP](https://github.com/wshobson/maverick-mcp) - Local MCP server for Yahoo Finance data, technical analysis, portfolio tracking and Python backtesting with no API key for core tools. `equities` `library` <img src="https://img.shields.io/github/stars/wshobson/maverick-mcp?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
-- [polyledger](https://github.com/nahrek/polyledger) - Resumable Polymarket indexer that collects CLOB market metadata and on-chain Polygon trades into a single DuckDB file for research and backtests. `prediction-markets` `library` <img src="https://img.shields.io/github/stars/nahrek/polyledger?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [Massive (Polygon) MCP](https://github.com/massive-com/mcp_massive) - Official MCP server for Massive.com (formerly Polygon.io) market data covering stocks, options, forex and crypto. `multi-asset` `library` <img src="https://img.shields.io/github/stars/massive-com/mcp_massive?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [SEC EDGAR MCP](https://github.com/stefanoamorelli/sec-edgar-mcp) - MCP server for querying SEC EDGAR filings and XBRL financial data. `equities` `library` <img src="https://img.shields.io/github/stars/stefanoamorelli/sec-edgar-mcp?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">
 - [Alpha Vantage MCP](https://github.com/alphavantage/alpha_vantage_mcp) - Official Alpha Vantage MCP server exposing prices, fundamentals, technical indicators and economic data as tools. `multi-asset` `library` <img src="https://img.shields.io/github/stars/alphavantage/alpha_vantage_mcp?style=flat-square&labelColor=2b2b2b&color=6b6b6b&label=" alt="stars">

@@ -2,7 +2,7 @@ name: weekly scout and stale check
 
 on:
   schedule:
-    - cron: "0 6 * * 1" # Monday 06:00 UTC
+    - cron: "23 6 * * 1" # Monday 06:23 UTC; off the hour, where GitHub drops scheduled runs under load
   workflow_dispatch:
 
 permissions:

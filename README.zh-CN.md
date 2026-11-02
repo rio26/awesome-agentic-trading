@@ -17,7 +17,7 @@
 
 | | | |
 |---|---|---|
-| [交易智能体与框架](#交易智能体与框架) (14) | [预测市场智能体](#预测市场智能体) (12) | [行情数据与研究工具](#行情数据与研究工具) (9) |
+| [交易智能体与框架](#交易智能体与框架) (14) | [预测市场智能体](#预测市场智能体) (12) | [行情数据与研究工具](#行情数据与研究工具) (8) |
 | [执行：券商与交易所接入](#执行券商与交易所接入) (9) | [风控与护栏](#风控与护栏) (6) | [回测与评测](#回测与评测) (9) |
 | [基准与排行榜](#基准与排行榜) (2) | [事故与复盘](#事故与复盘) (6) | [监管与合规](#监管与合规) (7) |
 | [中文资源 · A 股工具](#中文资源--a-股工具) (9) | [相关列表](#相关列表) (8) |  |
@@ -61,11 +61,11 @@
 
 - [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) - Financial Datasets API 的 MCP 服务器，覆盖行情、基本面、申报文件和新闻（最后提交于 2025 年中）。 · 17 个月无提交
 - [Maverick MCP](https://github.com/wshobson/maverick-mcp) - 本地 MCP 服务器，提供 Yahoo Finance 数据、技术分析、组合跟踪和 Python 回测，核心工具无需 API key。
-- [polyledger](https://github.com/nahrek/polyledger) - 可断点续跑的 Polymarket 索引器，把 CLOB 市场元数据和 Polygon 链上成交汇入一个 DuckDB 文件，用于研究和回测。
 - [Massive (Polygon) MCP](https://github.com/massive-com/mcp_massive) - Massive.com（原 Polygon.io）官方 MCP 服务器，提供股票、期权、外汇和加密货币行情。
 - [SEC EDGAR MCP](https://github.com/stefanoamorelli/sec-edgar-mcp) - 查询 SEC EDGAR 申报文件和 XBRL 财务数据的 MCP 服务器。
+- [Alpha Vantage MCP](https://github.com/alphavantage/alpha_vantage_mcp) - Alpha Vantage 官方 MCP 服务器，把行情、基本面、技术指标和经济数据暴露为工具。
 
-**[全部 9 条 →](sections/data_mcp.zh-CN.md)**
+**[全部 8 条 →](sections/data_mcp.zh-CN.md)**
 
 ## 执行：券商与交易所接入
 
@@ -165,4 +165,4 @@ LLM 智能体相互之间或与市场公开对垒的实盘竞技场和排行榜�
 ## 许可证
 
 [MIT](LICENSE)。被链接的项目各自保留其许可证。
-<!-- entries: 91 -->
+<!-- entries: 90 -->
